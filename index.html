@@ -89,9 +89,9 @@ nav {
 /* hover words start at their accent color, brighten further on hover */
 .hover-word { cursor: default; transition: color 0.18s; }
 .hover-word[data-idx="0"] { color: var(--blue); }
-.hover-word[data-idx="1"] { color: var(--pink); }
+.hover-word[data-idx="1"] { color: var(--lavender); }
 .hover-word[data-idx="2"] { color: var(--red); }
-.hover-word[data-idx="3"] { color: var(--lavender); }
+.hover-word[data-idx="3"] { color: var(--amber); }
 
 .lime-period { color: var(--lime); }
 
@@ -821,15 +821,15 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
 // ── HERO HOVER ──
 const hoverData = [
   { color: 'var(--blue)', note: "SolidWorks, 3D printing, laser cutting, FDA docs — I've shipped real hardware.", icon: '⚙' },
-  { color: 'var(--pink)', note: "Photography, graphic design, visual communication — aesthetics are never an afterthought.", icon: '◈' },
+  { color: 'var(--lavender)', note: "Photography, graphic design, visual communication — aesthetics are never an afterthought.", icon: '◈' },
   { color: 'var(--red)', note: "6 years. Two concurrent roles. One project. Fabrication bench to peer-reviewed publication.", icon: '◎' },
-  { color: 'var(--lavender)', note: "The ones that need someone who can make it, research it, and explain it — all three.", icon: '◆' }
+  { color: 'var(--amber)', note: "The ones that need someone who can make it, research it, and explain it — all three.", icon: '◆' }
 ];
 const words = document.querySelectorAll('.hover-word');
 const ann = document.getElementById('hero-ann');
 const annText = document.getElementById('ann-text');
 const annIcon = document.getElementById('ann-icon');
-const baseColors = ['var(--blue)','var(--pink)','var(--red)','var(--lavender)'];
+const baseColors = ['var(--blue)','var(--lavender)','var(--red)','var(--amber)'];
 
 const heroLines = document.querySelectorAll('.hero-p1, .hero-p2');
 
