@@ -6,7 +6,7 @@
 <!-- ═══════════════════════════════════════════
      EDIT YOUR NAME IN THE TITLE BELOW
      ═══════════════════════════════════════════ -->
-<title>Evangeline — Engineer · Designer · Researcher · Artist</title>
+<title>Your Name — Engineer · Designer · Artist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
@@ -285,7 +285,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
      NAV — replace "Portfolio" with your name
      ═══════════════════════════════════════════ -->
 <nav>
-  <span class="nav-logo">Evangeline Mensah-Agyekum</span>
+  <span class="nav-logo">Portfolio</span>
   <div class="nav-links">
     <a href="#work">Work</a>
     <a href="#about">About</a>
@@ -587,6 +587,21 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
       </div>
     </div>
     <div>
+      <!-- ═══════════════════════════════════════════
+           FEATURED PROJECT SLIDESHOW
+           Add images inside each .slide div:
+           <img src="your-image.jpg" alt="description">
+           Add or remove .slide divs as needed
+           ═══════════════════════════════════════════ -->
+      <div class="slideshow" id="ss-featured" style="margin-bottom:2.5rem;aspect-ratio:16/9;">
+        <div class="slide active"><div class="slide-placeholder">[ add image — eeg device ]</div></div>
+        <div class="slide"><div class="slide-placeholder">[ add image — prototype detail ]</div></div>
+        <div class="slide"><div class="slide-placeholder">[ add image — testing / clinical ]</div></div>
+        <div class="slide"><div class="slide-placeholder">[ add image — documentation / process ]</div></div>
+        <button class="slide-arrow prev" onclick="slideNav('ss-featured',-1)">‹</button>
+        <button class="slide-arrow next" onclick="slideNav('ss-featured',1)">›</button>
+        <div class="slide-controls" id="ss-featured-dots"></div>
+      </div>
       <h3 class="project-main-title">Wearable EEG Interface Design</h3>
       <div class="project-body">
         <p>What starts as a design problem rarely stays one. For six years I held two concurrent roles on the same project — product design engineer and ECE researcher — contributing simultaneously at the fabrication bench, the coordination table, and the publication stage.</p>
@@ -713,39 +728,34 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
       <span class="skill-item">Human-Centered Design</span>
       <span class="skill-item">UX Research</span>
       <span class="skill-item">UI Design</span>
-      <span class="skill-item">Usability Testing</span>
-      <span class="skill-item">Interviewing & Moderation</span>
-      <span class="skill-item">Qualitative Methods</span>
-      <span class="skill-item">Design Strategy</span>
-      <span class="skill-item">Systems Thinking</span>
     </div>
     <div>
       <p class="skill-group-label">Creative</p>
       <span class="skill-item">Creative Direction</span>
-      <span class="skill-item">Visual Storytelling</span>
       <span class="skill-item">Photography</span>
-      <span class="skill-item">Concept Development</span>
-      <span class="skill-item">Presentation Design</span>
+      <span class="skill-item">Visual Storytelling</span>
     </div>
     <div>
       <p class="skill-group-label">Making</p>
       <span class="skill-item">Physical Prototyping</span>
       <span class="skill-item">3D Printing</span>
-      <span class="skill-item">Laser Cutting</span>
-      <span class="skill-item">CNC Machining</span>
-      <span class="skill-item">Soldering</span>
       <span class="skill-item">Arduino</span>
     </div>
     <div>
       <p class="skill-group-label">Tools</p>
       <span class="skill-item">Figma</span>
-      <span class="skill-item">Adobe Creative Suite</span>
       <span class="skill-item">SolidWorks</span>
-      <span class="skill-item">Fusion 360</span>
-      <span class="skill-item">AutoCAD</span>
-      <span class="skill-item">Miro</span>
-      <span class="skill-item">Python · Java</span>
+      <span class="skill-item">Adobe Creative Suite</span>
     </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       RESUME LINK — replace # with your resume URL
+       (Google Doc, Dropbox PDF, etc.)
+       ═══════════════════════════════════════════ -->
+  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+    <p style="font-size:11px;color:var(--text-dim);max-width:420px;line-height:1.8;">Full resume includes complete skills, tools, and experience — including usability testing, qualitative methods, design strategy, CNC machining, laser cutting, Fusion 360, AutoCAD, Miro, Python, Java, and more.</p>
+    <a href="https://LINK-TO-YOUR-RESUME.com" target="_blank" style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--lavender);border:1px solid var(--lavender-dim);padding:0.6rem 1.25rem;transition:border-color 0.2s,color 0.2s;white-space:nowrap;">View full resume →</a>
   </div>
 </section>
 
@@ -760,14 +770,14 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
   <div>
     <p class="connect-heading">Connect</p>
-    <a class="connect-link" href="mailto:EVANGELINE7MA@GMAIL.COM">Email</a>
-    <a class="connect-link" href="https://linkedin.com/evangelinema" target="_blank">LinkedIn</a>
-    <a class="connect-link" href="https://are.na/starpearl" target="_blank">Are.na</a>
-    <a class="connect-link" href="https://EVANGELINEMA.COM" target="_blank">Full site →</a>
+    <a class="connect-link" href="mailto:YOUR@EMAIL.COM">Email</a>
+    <a class="connect-link" href="https://linkedin.com/in/YOURUSERNAME" target="_blank">LinkedIn</a>
+    <a class="connect-link" href="https://are.na/YOURUSERNAME" target="_blank">Are.na</a>
+    <a class="connect-link" href="https://YOURMAINSITEURL.COM" target="_blank">Full site →</a>
   </div>
   <div>
     <p class="connect-heading">Location</p>
-    <span class="connect-link">[ WHEREVER THE SUN IS SHINING ]</span>
+    <span class="connect-link">[ Your City, State ]</span>
     <span style="display:block;font-size:13px;color:var(--text-dim);font-style:italic;line-height:2.3;">Open to remote</span>
   </div>
 </section>
@@ -776,8 +786,8 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
      FOOTER — replace with your name and year
      ═══════════════════════════════════════════ -->
 <footer>
-  <p>[ Evangeline Mensah-Agyekum ] — 2026</p>
-  <p>Engineer · Designer · Researcher · Artist</p>
+  <p>[ Your Name ] — 2025</p>
+  <p>Engineer · Designer · Artist</p>
 </footer>
 
 <script>
@@ -794,17 +804,22 @@ const annText = document.getElementById('ann-text');
 const annIcon = document.getElementById('ann-icon');
 const baseColors = ['#f59e0b','#f472b6','#60a5fa','#4ade80'];
 
+const heroLines = document.querySelectorAll('.hero-p1, .hero-p2');
+
 words.forEach(w => {
   const i = parseInt(w.dataset.idx);
   w.addEventListener('mouseenter', () => {
-    // brighten hovered word, dim others slightly
-    words.forEach((o, j) => o.style.color = j === i ? '#ffffff' : baseColors[j] + '55');
+    // dim all headline text
+    heroLines.forEach(l => l.style.color = '#2a2a28');
+    // brighten hovered word, dim other words
+    words.forEach((o, j) => o.style.color = j === i ? baseColors[j] : '#2a2a28');
     annText.textContent = hoverData[i].note;
     annIcon.textContent = hoverData[i].icon;
     annIcon.style.color = hoverData[i].color;
     ann.style.opacity = '1';
   });
   w.addEventListener('mouseleave', () => {
+    heroLines.forEach(l => l.style.color = '');
     words.forEach((o, j) => o.style.color = baseColors[j]);
     ann.style.opacity = '0';
   });
@@ -847,7 +862,7 @@ function slideNav(id, dir) {
   goToSlide(id, state.current + dir);
 }
 
-['ss-eeg','ss-3d','ss-gd','ss-ux','ss-p1','ss-p2','ss-p3'].forEach(initSlideshow);
+['ss-eeg','ss-3d','ss-gd','ss-ux','ss-featured','ss-p1','ss-p2','ss-p3'].forEach(initSlideshow);
 
 setInterval(() => {
   ['ss-3d','ss-gd'].forEach(id => { const s = slideshowState[id]; if (s) goToSlide(id, s.current + 1); });
