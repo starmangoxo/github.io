@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Your Name] — Engineer · Designer · Artist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+:root {
+  --bg: #0a0a0a;
+  --bg2: #111111;
+  --bg3: #161616;
+  --text: #e8e4dc;
+  --text-dim: #888880;
+  --text-mid: #aaa89f;
+  --red: #d63c2f;
+  --lime: #b5d400;
+  --lavender: #b8a9e8;
+  --lavender-dim: #7a6dab;
+  --rule: #1e1e1c;
+  --serif: 'Instrument Serif', 'Georgia', serif;
+  --mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+html { background: var(--bg); color: var(--text); font-family: var(--mono); font-size: 14px; line-height: 1.6; scroll-behavior: smooth; }
+body { max-width: 100%; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.75rem 2.5rem;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.95) 0%, transparent 100%);
+}
+.nav-logo { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.15s; }
+.nav-links a:hover { color: var(--text); }
+
+/* ── SECTION HEADER ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  position: relative;
+}
+.section-num { font-size: 11px; color: var(--red); letter-spacing: 0.08em; position: relative; z-index: 1; background: var(--bg); padding-right: 1rem; }
+.section-rule { position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--red); opacity: 0.25; }
+.section-lbl { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); position: relative; z-index: 1; background: var(--bg); padding-left: 1rem; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.hero-left-rule { position: absolute; left: 2.5rem; top: 10%; bottom: 10%; width: 1px; background: var(--red); opacity: 0.5; }
+.hero-available { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 2.5rem; padding-left: 2rem; }
+
+.hero-headline {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 7.5vw, 7rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  padding-left: 2rem;
+  max-width: 860px;
+}
+
+.hero-p1 { display: block; color: var(--text-dim); margin-bottom: 0.4em; }
+.hero-p2 { display: block; color: var(--text-dim); font-style: italic; }
+
+.hover-word {
+  cursor: default;
+  transition: color 0.18s;
+  color: var(--text-dim);
+}
+
+.lime-period { color: var(--lime); }
+
+.hero-annotation {
+  position: absolute;
+  bottom: 5rem;
+  right: 2.5rem;
+  max-width: 300px;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.hero-ann-inner { display: flex; align-items: flex-start; justify-content: flex-end; gap: 8px; }
+.ann-icon { font-size: 11px; margin-top: 2px; flex-shrink: 0; }
+.ann-text { font-size: 11px; line-height: 1.65; color: var(--text-dim); font-style: italic; }
+
+.hero-blurb {
+  margin-top: 3.5rem;
+  padding-left: 2rem;
+  max-width: 440px;
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.85;
+}
+
+.hero-social { position: absolute; bottom: 2.5rem; right: 2.5rem; display: flex; gap: 2rem; }
+.hero-social a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); transition: color 0.15s; }
+.hero-social a:hover { color: var(--text); }
+.scroll-label { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); opacity: 0.4; }
+
+/* ── SECTIONS ── */
+.section { padding: 6rem 2.5rem; border-top: 1px solid var(--rule); }
+
+/* ── INTRO ── */
+.intro-headline {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.25;
+  color: var(--text-mid);
+  max-width: 820px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.intro-headline em { font-style: italic; color: var(--red); }
+.intro-headline em.lime { color: var(--lime); }
+.intro-body { max-width: 560px; font-size: 12px; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; }
+
+/* ── WORK GRID ── */
+.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); }
+
+.work-item { background: var(--bg2); display: flex; flex-direction: column; }
+
+/* SLIDESHOW */
+.slideshow {
+  aspect-ratio: 16/10;
+  background: var(--bg3);
+  position: relative;
+  overflow: hidden;
+}
+.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.5s ease; display: flex; align-items: center; justify-content: center; }
+.slide.active { opacity: 1; }
+.slide-placeholder { font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); text-align: center; line-height: 2; }
+.slide-dot-color { position: absolute; top: 1rem; right: 1rem; width: 10px; height: 10px; border-radius: 50%; }
+
+.slide-controls {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.slide-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  opacity: 0.35;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  border: none;
+  padding: 0;
+}
+.slide-dot.on { opacity: 1; background: var(--text); }
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.15s;
+  z-index: 2;
+}
+.slide-arrow:hover { color: var(--text); }
+.slide-arrow.prev { left: 0.75rem; }
+.slide-arrow.next { right: 0.75rem; }
+
+.work-meta { padding: 1.5rem; border-top: 1px solid var(--rule); }
+.work-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
+.work-title { font-size: 13px; font-weight: 400; color: var(--text); }
+.work-title-arrow { font-size: 11px; color: var(--text-dim); margin-left: 4px; }
+.work-year { font-size: 11px; color: var(--text-dim); letter-spacing: 0.05em; }
+.work-desc { font-size: 11px; color: var(--text-dim); line-height: 1.75; margin-bottom: 1rem; }
+.work-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.work-tag { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--rule); padding: 3px 8px; transition: border-color 0.15s, color 0.15s; }
+.work-tag:hover { border-color: var(--lavender-dim); color: var(--lavender); }
+
+/* ── ADDITIONAL PROJECTS ── */
+.project-cards { display: flex; flex-direction: column; gap: 1px; background: var(--rule); }
+
+.proj-card { background: var(--bg2); }
+
+.proj-header {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.proj-header:hover { background: var(--bg3); }
+
+.proj-slideshow-mini {
+  width: 180px;
+  aspect-ratio: 4/3;
+  background: var(--bg3);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.proj-slideshow-mini .slide { display: flex; align-items: center; justify-content: center; }
+
+.proj-info { flex: 1; }
+
+.proj-num { font-size: 10px; color: var(--lavender-dim); letter-spacing: 0.12em; margin-bottom: 0.75rem; }
+.proj-title { font-family: var(--serif); font-size: 1.3rem; color: var(--text); font-weight: 400; margin-bottom: 0.75rem; line-height: 1.2; }
+.proj-short { font-size: 11px; color: var(--text-dim); line-height: 1.75; max-width: 500px; }
+.proj-toggle { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lavender-dim); margin-top: 1rem; display: flex; align-items: center; gap: 6px; transition: color 0.15s; }
+.proj-toggle .arrow { display: inline-block; transition: transform 0.3s; }
+.proj-toggle.open .arrow { transform: rotate(90deg); }
+.proj-toggle:hover { color: var(--lavender); }
+
+.proj-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 2rem;
+  border-top: 0px solid var(--rule);
+}
+.proj-details.open {
+  max-height: 900px;
+  padding: 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.proj-detail-text { font-size: 12px; color: var(--text-dim); line-height: 1.85; margin-bottom: 1rem; max-width: 640px; }
+.proj-detail-text:last-child { margin-bottom: 0; }
+.proj-components { list-style: none; margin: 1rem 0 1rem 0; }
+.proj-components li { font-size: 12px; color: var(--text-dim); line-height: 1.8; padding-left: 1.25rem; position: relative; }
+.proj-components li::before { content: '—'; position: absolute; left: 0; color: var(--lavender-dim); }
+.proj-component-name { color: var(--lavender); }
+
+/* ── ABOUT ── */
+.about-layout { display: grid; grid-template-columns: 1fr 300px; gap: 5rem; align-items: start; }
+
+.about-headline {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--text-mid);
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+}
+.about-headline em { font-style: italic; }
+.about-headline .red { color: var(--red); }
+.about-headline .lime { color: var(--lime); }
+
+.about-body p { font-size: 12px; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; max-width: 540px; }
+
+.sidebar-section { margin-bottom: 2.5rem; }
+.sidebar-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+.sidebar-item { font-size: 12px; color: var(--text-dim); line-height: 2.1; display: block; }
+
+/* ── FEATURED PROJECT ── */
+.project-layout { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; }
+.project-sidebar { position: sticky; top: 6rem; }
+.proj-meta-item { margin-bottom: 2rem; }
+.proj-meta-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
+.proj-meta-val { font-size: 12px; color: var(--text-dim); line-height: 1.9; display: block; }
+
+.project-main-title { font-family: var(--serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--text); margin-bottom: 2rem; line-height: 1.2; }
+.project-body p { font-size: 12px; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; max-width: 600px; }
+.project-pullquote { font-family: var(--serif); font-size: 1.15rem; color: var(--text-mid); border-left: 2px solid var(--lavender-dim); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; line-height: 1.5; max-width: 560px; }
+
+/* ── PUBLICATIONS ── */
+.pub-list { list-style: none; }
+.pub-item { display: grid; grid-template-columns: 60px 1fr auto; gap: 1.5rem 2rem; align-items: start; padding: 1.75rem 0; border-bottom: 1px solid var(--rule); }
+.pub-item:first-child { border-top: 1px solid var(--rule); }
+.pub-year { font-size: 11px; color: var(--text-dim); letter-spacing: 0.05em; padding-top: 2px; }
+.pub-title { font-size: 12px; color: var(--text-mid); line-height: 1.65; margin-bottom: 0.35rem; }
+.pub-journal { font-size: 11px; color: var(--text-dim); font-style: italic; }
+.pub-arrow { font-size: 11px; color: var(--text-dim); padding-top: 2px; transition: color 0.15s; }
+.pub-item:hover .pub-arrow { color: var(--lavender); }
+
+/* ── SKILLS ── */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem 2.5rem; }
+.skill-group-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+.skill-item { font-size: 12px; color: var(--text-dim); line-height: 2.1; display: block; }
+
+/* ── CONTACT ── */
+#contact { padding: 8rem 2.5rem; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4rem; align-items: start; }
+.contact-headline { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 400; line-height: 1.05; color: var(--text); margin-bottom: 1.5rem; }
+.contact-headline .period { color: var(--red); }
+.contact-sub { font-size: 12px; color: var(--text-dim); line-height: 1.85; max-width: 300px; }
+.connect-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); margin-bottom: 1.25rem; }
+.connect-link { display: block; font-size: 13px; color: var(--text-dim); line-height: 2.3; transition: color 0.15s; }
+.connect-link:hover { color: var(--lavender); }
+
+/* ── FOOTER ── */
+footer { padding: 1.5rem 2.5rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: 1fr; }
+  .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .project-layout { grid-template-columns: 1fr; }
+  .project-sidebar { position: static; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  #contact { grid-template-columns: 1fr; gap: 2.5rem; }
+  .proj-header { grid-template-columns: 1fr; }
+  .proj-slideshow-mini { width: 100%; }
+}
+@media (max-width: 600px) {
+  nav { padding: 1.25rem; }
+  .section { padding: 4rem 1.25rem; }
+  #hero { padding: 0 1.25rem; }
+  .hero-headline { padding-left: 1rem; font-size: 2.8rem; }
+  .hero-available, .hero-blurb { padding-left: 1rem; }
+  #contact { padding: 4rem 1.25rem; }
+  footer { padding: 1.25rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .hero-social { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Portfolio</span>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-left-rule"></div>
+  <p class="hero-available">Available for select projects</p>
+
+  <h1 class="hero-headline">
+    <span class="hero-p1">
+      <span class="hover-word" data-idx="0">Engineer</span> by training,
+      <span class="hover-word" data-idx="1">artist</span> by practice<span class="lime-period">.</span>
+    </span>
+    <span class="hero-p2">
+      Most people pick one. I live in <span class="hover-word" data-idx="2">that gap</span>, and I've found it's exactly where the <span class="hover-word" data-idx="3">best problems</span> are<span class="lime-period">.</span>
+    </span>
+  </h1>
+
+  <div class="hero-annotation" id="hero-ann">
+    <div class="hero-ann-inner">
+      <span class="ann-icon" id="ann-icon"></span>
+      <p class="ann-text" id="ann-text"></p>
+    </div>
+  </div>
+
+  <p class="hero-blurb">
+    I make products you can hold, research how people use them, and make sure the work speaks for itself — visually and technically.
+  </p>
+
+  <div class="hero-social">
+    <a href="#">LinkedIn</a>
+    <a href="#">Email</a>
+    <a href="#">Are.na</a>
+  </div>
+  <span class="scroll-label">Scroll</span>
+</section>
+
+<!-- ══ INTRO ══ -->
+<section class="section" id="intro">
+  <div class="section-header">
+    <span class="section-num">00</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Introduction</span>
+  </div>
+  <p class="intro-headline">
+    I don't believe in the separation of <em>technical</em> and <em class="lime">creative</em> minds.
+  </p>
+  <p class="intro-body">
+    Design, engineering, research, and the arts don't usually live in the same person — but that overlap is exactly where my work comes from. I've spent years building physical products, running research operations, studying users, and communicating complex ideas to people who need to act on them.
+  </p>
+  <p class="intro-body">
+    I care about how things work, who they work for, and how they look doing it. This page is a window into the product, design, and research side of my practice — sitting alongside my work as an artist and photographer.
+  </p>
+</section>
+
+<!-- ══ SELECTED WORK ══ -->
+<section class="section" id="work">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Selected Work</span>
+  </div>
+
+  <div class="work-grid">
+
+    <!-- EEG PROJECT -->
+    <div class="work-item">
+      <div class="slideshow" id="ss-eeg">
+        <div class="slide active"><div class="slide-placeholder">[ image 1 ]<br>EEG device prototype</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 2 ]<br>fabrication detail</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 3 ]<br>clinical testing</div></div>
+        <div class="slide-dot-color" style="background:var(--red);"></div>
+        <button class="slide-arrow prev" onclick="slideNav('ss-eeg',-1)">‹</button>
+        <button class="slide-arrow next" onclick="slideNav('ss-eeg',1)">›</button>
+        <div class="slide-controls" id="ss-eeg-dots"></div>
+      </div>
+      <div class="work-meta">
+        <div class="work-title-row">
+          <span class="work-title">Wearable EEG Interface Design <span class="work-title-arrow">↗</span></span>
+          <span class="work-year">2019–2024</span>
+        </div>
+        <p class="work-desc">Research-grade wearable EEG hardware designed for clinical use. Prototyped and tested across four international sites. Led usability, fabrication documentation, and FDA application materials — concurrently with a research coordination role on the same project.</p>
+        <div class="work-tags">
+          <span class="work-tag">Hardware</span>
+          <span class="work-tag">SolidWorks</span>
+          <span class="work-tag">Medtech</span>
+          <span class="work-tag">Fabrication</span>
+          <span class="work-tag">Research Ops</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D / CAD SLIDESHOW -->
+    <div class="work-item">
+      <div class="slideshow" id="ss-3d">
+        <div class="slide active"><div class="slide-placeholder">[ image 1 ]<br>3D render / CAD</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 2 ]<br>3D render / CAD</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 3 ]<br>3D render / CAD</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 4 ]<br>3D render / CAD</div></div>
+        <div class="slide-dot-color" style="background:var(--lime);"></div>
+        <button class="slide-arrow prev" onclick="slideNav('ss-3d',-1)">‹</button>
+        <button class="slide-arrow next" onclick="slideNav('ss-3d',1)">›</button>
+        <div class="slide-controls" id="ss-3d-dots"></div>
+      </div>
+      <div class="work-meta">
+        <div class="work-title-row">
+          <span class="work-title">3D Rendering & CAD</span>
+          <span class="work-year">Selected</span>
+        </div>
+        <p class="work-desc">A selection of modeled and rendered work — product visualization, concept development, and fabrication-ready geometry.</p>
+        <div class="work-tags">
+          <span class="work-tag">3D</span>
+          <span class="work-tag">CAD</span>
+          <span class="work-tag">SolidWorks</span>
+          <span class="work-tag">[ add render tool ]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRAPHIC DESIGN SLIDESHOW -->
+    <div class="work-item">
+      <div class="slideshow" id="ss-gd">
+        <div class="slide active"><div class="slide-placeholder">[ image 1 ]<br>graphic design</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 2 ]<br>graphic design</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 3 ]<br>graphic design</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 4 ]<br>graphic design</div></div>
+        <div class="slide-dot-color" style="background:var(--lavender);"></div>
+        <button class="slide-arrow prev" onclick="slideNav('ss-gd',-1)">‹</button>
+        <button class="slide-arrow next" onclick="slideNav('ss-gd',1)">›</button>
+        <div class="slide-controls" id="ss-gd-dots"></div>
+      </div>
+      <div class="work-meta">
+        <div class="work-title-row">
+          <span class="work-title">Graphic Design</span>
+          <span class="work-year">Selected</span>
+        </div>
+        <p class="work-desc">Visual communication across research, grant media, publication figures, and personal creative projects — rooted in an arts practice.</p>
+        <div class="work-tags">
+          <span class="work-tag">Visual</span>
+          <span class="work-tag">Graphic</span>
+          <span class="work-tag">Creative Direction</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- UX RESEARCH -->
+    <div class="work-item">
+      <div class="slideshow" id="ss-ux">
+        <div class="slide active"><div class="slide-placeholder">[ image 1 ]<br>UX research</div></div>
+        <div class="slide"><div class="slide-placeholder">[ image 2 ]<br>UX research</div></div>
+        <div class="slide-dot-color" style="background:#60a5fa;"></div>
+        <button class="slide-arrow prev" onclick="slideNav('ss-ux',-1)">‹</button>
+        <button class="slide-arrow next" onclick="slideNav('ss-ux',1)">›</button>
+        <div class="slide-controls" id="ss-ux-dots"></div>
+      </div>
+      <div class="work-meta">
+        <div class="work-title-row">
+          <span class="work-title">UX Research</span>
+          <span class="work-year">Selected</span>
+        </div>
+        <p class="work-desc">User interviews, surveys, and usability studies across client populations. Translated findings into design decisions for UI and software development teams.</p>
+        <div class="work-tags">
+          <span class="work-tag">UX Research</span>
+          <span class="work-tag">Interviewing</span>
+          <span class="work-tag">Data Synthesis</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ADDITIONAL PROJECTS ══ -->
+<section class="section" id="projects">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Additional Projects</span>
+  </div>
+
+  <div class="project-cards">
+
+    <!-- PROJECT 1 -->
+    <div class="proj-card">
+      <div class="proj-header" onclick="toggleProject('p1')">
+        <div>
+          <p class="proj-num">Project 01</p>
+          <p class="proj-title">Responsive On-Body Fragility Indication</p>
+          <p class="proj-short">A wearable system designed to sense and communicate fragility states — exploring the intersection of the body, material feedback, and responsive design.</p>
+          <div class="proj-toggle" id="p1-toggle">
+            <span class="arrow">›</span> View process
+          </div>
+        </div>
+        <div class="proj-slideshow-mini" id="ss-p1">
+          <div class="slide active"><div class="slide-placeholder">[ image ]</div></div>
+          <div class="slide"><div class="slide-placeholder">[ image ]</div></div>
+          <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p1',-1)">‹</button>
+          <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p1',1)">›</button>
+        </div>
+      </div>
+      <div class="proj-details" id="p1-details">
+        <p class="proj-detail-text">[ Add your full process description here. What was the problem, who was it for, what constraints shaped the design, what did you learn. ]</p>
+        <p class="proj-detail-text">[ Add a second paragraph about methods, materials, fabrication decisions, or testing. ]</p>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="proj-card">
+      <div class="proj-header" onclick="toggleProject('p2')">
+        <div>
+          <p class="proj-num">Project 02</p>
+          <p class="proj-title">Who Are You?</p>
+          <p class="proj-short">An interactive zoetrope installation designed to prompt introspection. The piece changes in response to the viewer's presence — their proximity alters what they see.</p>
+          <div class="proj-toggle" id="p2-toggle">
+            <span class="arrow">›</span> View process
+          </div>
+        </div>
+        <div class="proj-slideshow-mini" id="ss-p2">
+          <div class="slide active"><div class="slide-placeholder">[ image ]</div></div>
+          <div class="slide"><div class="slide-placeholder">[ image ]</div></div>
+          <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p2',-1)">‹</button>
+          <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p2',1)">›</button>
+        </div>
+      </div>
+      <div class="proj-details" id="p2-details">
+        <p class="proj-detail-text">The title "Who Are You?" was designed to force introspection for guests who encounter the piece. It's meant for people to ponder how they see themselves — not to answer the question, but to sit with it.</p>
+        <p class="proj-detail-text">The device is built from three main active components working together to create its effect:</p>
+        <ul class="proj-components">
+          <li><span class="proj-component-name">Stepper Motor</span> — drives the rotation of the Zoetrope, controlling the speed and rhythm of the animation.</li>
+          <li><span class="proj-component-name">Two Ultrasound Sensors</span> — one detects the viewer's approach and starts the machine; the second tracks proximity to shift the RGB light.</li>
+          <li><span class="proj-component-name">RGB LED Strip</span> — strobes the Zoetrope at precise intervals, creating the illusion of motion from still images.</li>
+        </ul>
+        <p class="proj-detail-text">This simple mechanism carries a surprisingly layered narrative. The viewer is drawn in by the mesmerizing effect but quickly realizes their presence is shaping what they see. A mirror at the back of the installation extends this — placing the visitor inside the piece itself, not just in front of it.</p>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="proj-card">
+      <div class="proj-header" onclick="toggleProject('p3')">
+        <div>
+          <p class="proj-num">Project 03</p>
+          <p class="proj-title">Retractable Rain Hood — The Apricots</p>
+          <p class="proj-short">A human-centered design project developed in collaboration with a client who uses a wheelchair, addressing rain protection without compromising hand strength or mobility.</p>
+          <div class="proj-toggle" id="p3-toggle">
+            <span class="arrow">›</span> View process
+          </div>
+        </div>
+        <div class="proj-slideshow-mini" id="ss-p3">
+          <div class="slide active"><div class="slide-placeholder">[ image ]</div></div>
+          <div class="slide"><div class="slide-placeholder">[ image ]</div></div>
+          <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p3',-1)">‹</button>
+          <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p3',1)">›</button>
+        </div>
+      </div>
+      <div class="proj-details" id="p3-details">
+        <p class="proj-detail-text">Our client uses a wheelchair and has limited hand strength — making standard umbrellas effectively inaccessible. The brief was to design a solution that protected her from rain while keeping her hands free and in control of her chair.</p>
+        <p class="proj-detail-text">After working directly with the client through a series of meetings, we developed a retractable hood system that could be operated with minimal grip strength and without interrupting her ability to maneuver. The design was shaped entirely around her specific physical constraints and daily routines — not a general-purpose product, but something made for one person's real life.</p>
+        <p class="proj-detail-text">[ Add materials, fabrication process, testing notes, or final outcome here. ]</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FEATURED PROJECT ══ -->
+<section class="section" id="featured">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Featured Project</span>
+  </div>
+
+  <div class="project-layout">
+    <div class="project-sidebar">
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">Duration</p>
+        <span class="proj-meta-val">6 years</span>
+      </div>
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">Roles</p>
+        <span class="proj-meta-val">Product Design Engineer</span>
+        <span class="proj-meta-val">ECE Researcher</span>
+        <span class="proj-meta-val" style="color:var(--text-dim);font-style:italic;">(concurrent)</span>
+      </div>
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">Domains</p>
+        <span class="proj-meta-val">Medtech / neurotechnology</span>
+        <span class="proj-meta-val">Clinical usability</span>
+        <span class="proj-meta-val">Hardware development</span>
+        <span class="proj-meta-val">Research operations</span>
+      </div>
+    </div>
+    <div>
+      <h3 class="project-main-title">Wearable EEG Interface Design</h3>
+      <div class="project-body">
+        <p>What starts as a design problem rarely stays one. For six years I held two concurrent roles on the same project — product design engineer and ECE researcher — contributing simultaneously at the fabrication bench, the coordination table, and the publication stage.</p>
+        <p>On the design side: I prototyped and tested research-grade wearable EEG devices using SolidWorks and digital fabrication, advised on hair and scalp interface usability and accessibility, managed design documentation for accuracy and repeatability, and led initial FDA application materials.</p>
+        <p>On the research side: I coordinated testing across four international sites, developed standardized intake procedures, partnered with clinicians and vendors on system evaluation, supported grant writing and reporting, and co-authored multiple peer-reviewed publications.</p>
+        <p class="project-pullquote">Holding both roles simultaneously meant I was constantly translating — between making and managing, between technical requirements and human needs, between what was built and what needed to be communicated.</p>
+        <p>That's the kind of work I do best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="section" id="about">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">About</span>
+  </div>
+  <div class="about-layout">
+    <div>
+      <h2 class="about-headline">
+        I don't believe the <em class="red">maker</em> and the <em class="lime">researcher</em> should be different people.
+      </h2>
+      <div class="about-body">
+        <p>I'm a product design engineer with a background spanning hardware development, clinical research, UX, and the visual arts. I studied product innovation and applied entrepreneurial studies in the school of engineering at one of the top five universities in the US — a self-defined major that set the tone for everything since. I don't fit neatly into one box, and I've learned to make that the point.</p>
+        <p>For six years I held two concurrent roles on the same project — product design engineer and ECE researcher. I was at the fabrication bench and the coordination table simultaneously: prototyping devices, advising clinicians, managing four international sites, and co-authoring peer-reviewed publications.</p>
+        <p>My arts practice runs alongside all of this, not separate from it. I bring an engineer's rigor, a researcher's patience, and an artist's eye — and I'm most useful when those things are needed in the same room.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">Previously</p>
+        <span class="sidebar-item">Product Design Engineer, [Lab]</span>
+        <span class="sidebar-item">ECE Researcher, [University]</span>
+        <span class="sidebar-item">UX/UI Intern, [Company]</span>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">Education</p>
+        <span class="sidebar-item">Product Innovation &</span>
+        <span class="sidebar-item">Applied Entrepreneurial Studies</span>
+        <span class="sidebar-item" style="color:var(--text-dim);font-style:italic;">School of Engineering</span>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">Available for</p>
+        <span class="sidebar-item">Freelance</span>
+        <span class="sidebar-item">Contract</span>
+        <span class="sidebar-item">Part-time</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PUBLICATIONS ══ -->
+<section class="section" id="publications">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Research &amp; Publications</span>
+  </div>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:2.5rem;max-width:500px;line-height:1.8;">
+    Selected co-authored publications from work on wearable EEG systems at the intersection of neurotechnology, clinical usability, and human-centered design.
+  </p>
+  <ul class="pub-list">
+    <li class="pub-item">
+      <span class="pub-year">[ year ]</span>
+      <div>
+        <p class="pub-title">[ Publication title — add your paper here ]</p>
+        <p class="pub-journal">[ Journal / Conference name ]</p>
+      </div>
+      <span class="pub-arrow"><a href="#">↗</a></span>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">[ year ]</span>
+      <div>
+        <p class="pub-title">[ Publication title — add your paper here ]</p>
+        <p class="pub-journal">[ Journal / Conference name ]</p>
+      </div>
+      <span class="pub-arrow"><a href="#">↗</a></span>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">[ year ]</span>
+      <div>
+        <p class="pub-title">[ Publication title — add your paper here ]</p>
+        <p class="pub-journal">[ Journal / Conference name ]</p>
+      </div>
+      <span class="pub-arrow"><a href="#">↗</a></span>
+    </li>
+  </ul>
+</section>
+
+<!-- ══ SKILLS ══ -->
+<section class="section" id="skills">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Skills &amp; Tools</span>
+  </div>
+  <div class="skills-grid">
+
+    <div>
+      <p class="skill-group-label">Research &amp; Strategy</p>
+      <span class="skill-item">UX Research</span>
+      <span class="skill-item">Human-Centered Design</span>
+      <span class="skill-item">Qualitative Methods</span>
+      <span class="skill-item">Interviewing &amp; Moderation</span>
+      <span class="skill-item">Usability Testing</span>
+      <span class="skill-item">Research Planning</span>
+      <span class="skill-item">Product Development</span>
+      <span class="skill-item">Stakeholder Collaboration</span>
+    </div>
+
+    <div>
+      <p class="skill-group-label">Creative &amp; Visual</p>
+      <span class="skill-item">Creative Direction</span>
+      <span class="skill-item">Visual Storytelling</span>
+      <span class="skill-item">Photography</span>
+      <span class="skill-item">Concept Development</span>
+      <span class="skill-item">Presentation Design</span>
+      <span class="skill-item">Pitch Deck</span>
+      <span class="skill-item">Communication</span>
+    </div>
+
+    <div>
+      <p class="skill-group-label">Technical &amp; Production</p>
+      <span class="skill-item">Project Management</span>
+      <span class="skill-item">Research Operations</span>
+      <span class="skill-item">Prototype Testing</span>
+      <span class="skill-item">Design Strategy</span>
+      <span class="skill-item">Systems Thinking</span>
+      <span class="skill-item">Problem Solving</span>
+    </div>
+
+    <div>
+      <p class="skill-group-label">Tools &amp; Software</p>
+      <span class="skill-item">Figma</span>
+      <span class="skill-item">Adobe Creative Suite</span>
+      <span class="skill-item">Miro</span>
+      <span class="skill-item">SolidWorks</span>
+      <span class="skill-item">AutoCAD</span>
+      <span class="skill-item">Fusion 360</span>
+      <span class="skill-item">Arduino</span>
+    </div>
+
+    <div>
+      <p class="skill-group-label">Programming &amp; Fabrication</p>
+      <span class="skill-item">Python</span>
+      <span class="skill-item">Java</span>
+      <span class="skill-item">3D Printing</span>
+      <span class="skill-item">Laser Cutting</span>
+      <span class="skill-item">CNC Machining</span>
+      <span class="skill-item">Soldering</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div>
+    <h2 class="contact-headline">Let's talk<span class="period">.</span></h2>
+    <p class="contact-sub">Open to freelance, contract, and part-time work in product design, research, UX, and visual communication.</p>
+  </div>
+  <div>
+    <p class="connect-heading">Connect</p>
+    <a class="connect-link" href="mailto:[your@email.com]">Email</a>
+    <a class="connect-link" href="#">LinkedIn</a>
+    <a class="connect-link" href="#">Are.na</a>
+    <a class="connect-link" href="#">Full site →</a>
+  </div>
+  <div>
+    <p class="connect-heading">Location</p>
+    <span class="connect-link">[ Your City ]</span>
+    <span style="display:block;font-size:13px;color:var(--text-dim);font-style:italic;line-height:2.3;">Open to remote</span>
+  </div>
+</section>
+
+<footer>
+  <p>[Your Name] — [Year]</p>
+  <p>Engineer · Designer · Artist</p>
+</footer>
+
+<script>
+// ── HERO HOVER ──
+const hoverData = [
+  { color: '#f59e0b', icon: '⚙', note: "SolidWorks, 3D printing, laser cutting, FDA docs — I've shipped real hardware." },
+  { color: '#f472b6', icon: '◈', note: "Photography, graphic design, visual communication — aesthetics are never an afterthought." },
+  { color: '#60a5fa', icon: '◎', note: "6 years. Two concurrent roles. One project. Fabrication bench to peer-reviewed publication." },
+  { color: '#4ade80', icon: '◆', note: "The ones that need someone who can make it, research it, and explain it — all three." }
+];
+const words = document.querySelectorAll('.hover-word');
+const ann = document.getElementById('hero-ann');
+const annText = document.getElementById('ann-text');
+const annIcon = document.getElementById('ann-icon');
+
+words.forEach(w => {
+  const i = parseInt(w.dataset.idx);
+  w.addEventListener('mouseenter', () => {
+    words.forEach(o => o.style.color = '');
+    w.style.color = hoverData[i].color;
+    annText.textContent = hoverData[i].note;
+    annIcon.textContent = hoverData[i].icon;
+    annIcon.style.color = hoverData[i].color;
+    ann.style.opacity = '1';
+  });
+  w.addEventListener('mouseleave', () => {
+    w.style.color = '';
+    ann.style.opacity = '0';
+  });
+});
+
+// ── SLIDESHOWS ──
+const slideshowState = {};
+
+function initSlideshow(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const slides = el.querySelectorAll('.slide');
+  slideshowState[id] = { current: 0, total: slides.length };
+
+  const dotsEl = document.getElementById(id + '-dots');
+  if (dotsEl) {
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'slide-dot' + (i === 0 ? ' on' : '');
+      d.onclick = () => goToSlide(id, i);
+      dotsEl.appendChild(d);
+    });
+  }
+}
+
+function goToSlide(id, idx) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const slides = el.querySelectorAll('.slide');
+  const state = slideshowState[id];
+  slides[state.current].classList.remove('active');
+  state.current = (idx + slides.length) % slides.length;
+  slides[state.current].classList.add('active');
+
+  const dotsEl = document.getElementById(id + '-dots');
+  if (dotsEl) {
+    dotsEl.querySelectorAll('.slide-dot').forEach((d, i) => {
+      d.classList.toggle('on', i === state.current);
+    });
+  }
+}
+
+function slideNav(id, dir) {
+  const state = slideshowState[id];
+  if (!state) return;
+  goToSlide(id, state.current + dir);
+}
+
+['ss-eeg','ss-3d','ss-gd','ss-ux','ss-p1','ss-p2','ss-p3'].forEach(initSlideshow);
+
+// Auto-advance main slideshows
+setInterval(() => {
+  ['ss-3d','ss-gd'].forEach(id => {
+    const s = slideshowState[id];
+    if (s) goToSlide(id, s.current + 1);
+  });
+}, 3500);
+
+// ── PROJECT DROPDOWNS ──
+function toggleProject(id) {
+  const details = document.getElementById(id + '-details');
+  const toggle = document.getElementById(id + '-toggle');
+  const isOpen = details.classList.contains('open');
+  details.classList.toggle('open', !isOpen);
+  toggle.classList.toggle('open', !isOpen);
+  toggle.childNodes[1].textContent = isOpen ? ' View process' : ' Hide process';
+}
+
+// ── SECTION FADE-IN ──
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section-header').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transition = 'opacity 0.6s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
