@@ -351,10 +351,93 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </p>
 </section>
 
+
+<!-- ══ FEATURED WORK ══ -->
+<section class="section" id="featured">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Featured Work</span>
+  </div>
+  <div class="project-layout">
+    <div class="project-sidebar">
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">Duration</p>
+        <span class="proj-meta-val">6 years</span>
+      </div>
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">Roles</p>
+        <span class="proj-meta-val">Product Design Engineer</span>
+        <span class="proj-meta-val">Research Associate, Electrical Computer Engineering Dpt.</span>
+        <span class="proj-meta-val" style="color:var(--text-dim);font-style:italic;">(concurrent)</span>
+      </div>
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">Domains</p>
+        <span class="proj-meta-val">Medtech / neurotechnology</span>
+        <span class="proj-meta-val">Clinical usability</span>
+        <span class="proj-meta-val">Hardware development</span>
+        <span class="proj-meta-val">Research operations</span>
+      </div>
+    </div>
+    <div>
+      <!-- ═══════════════════════════════════════════
+           FEATURED WORK SLIDESHOW
+           Add images inside each .slide div:
+           <img src="your-image.jpg" alt="description">
+           Add or remove .slide divs as needed
+           ═══════════════════════════════════════════ -->
+      <div class="slideshow" id="ss-featured" style="margin-bottom:2.5rem;aspect-ratio:16/9;">
+        <div class="slide active"><img src="Sevo-3.jpg" alt="EEG prototype" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="science.ads7375-f1.jpg" alt="EEG process" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="SevoElectrodes_ScienceNews.jpg" alt="EEG electrodes" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="SA-Sevo-3.jpg" alt="Sevo clinical-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="sevopic.jpg" alt="EEG device" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="pngroup.jpg" alt="PN Prize" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="neuroracism.jpg" alt="#Neuroracism Flyer" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="SA-Sevo-1.jpg" alt="Sevo SA-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="SA-Sevo-2.jpg" alt="Sevo SA-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="SA-Sevo-5.jpg" alt="Sevo SA-5" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <button class="slide-arrow prev" onclick="slideNav('ss-featured',-1)">‹</button>
+        <button class="slide-arrow next" onclick="slideNav('ss-featured',1)">›</button>
+        <div class="slide-controls" id="ss-featured-dots"></div>
+      </div>
+      <h3 class="project-main-title">Wearable EEG Interface Design</h3>
+      <div class="project-body">
+        <p>What starts as a design problem rarely stays one. For six years I held two concurrent roles on the same project — product design engineer and ECE researcher — contributing simultaneously at the fabrication bench, the coordination table, and the publication stage.</p>
+        <p>On the design side: I prototyped and tested research-grade wearable EEG devices using SolidWorks and digital fabrication, advised on hair and scalp interface usability and accessibility, managed design documentation for accuracy and repeatability, and led initial FDA application materials.</p>
+        <p>On the research side: I coordinated testing across four international sites, developed standardized intake procedures, partnered with clinicians and vendors on system evaluation, supported grant writing and reporting, and co-authored multiple peer-reviewed publications.</p>
+        <p class="project-pullquote">Holding both roles simultaneously meant I was constantly translating — between making and managing, between technical requirements and human needs, between what was built and what needed to be communicated.</p>
+        <p>That's the kind of work I do best.</p>
+
+        <!-- ═══════════════════════════════════════════
+             SPOTIFY PODCAST EMBED
+             1. Go to your podcast episode on Spotify
+             2. Click ··· → Share → Embed episode
+             3. Copy the src URL from the embed code
+             4. Paste it into the src attribute below
+             ═══════════════════════════════════════════ -->
+        <div style="margin-top:2.5rem;">
+          <p style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--lavender-dim);margin-bottom:1rem;">Featured on</p>
+          <iframe
+            src="https://open.spotify.com/embed/episode/2UbfqpaUDKUsU2DdvyiKSx?utm_source=generator"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style="border-radius:4px;">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+     
 <!-- ══ SELECTED WORK ══ -->
 <section class="section" id="work">
   <div class="section-header">
-    <span class="section-num">01</span>
+    <span class="section-num">02</span>
     <div class="section-rule"></div>
     <span class="section-lbl">Selected Work</span>
   </div>
@@ -468,7 +551,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
 <!-- ══ ADDITIONAL PROJECTS ══ -->
 <section class="section" id="projects">
   <div class="section-header">
-    <span class="section-num">02</span>
+    <span class="section-num">03</span>
     <div class="section-rule"></div>
     <span class="section-lbl">Additional Projects</span>
   </div>
@@ -559,87 +642,6 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ══ FEATURED WORK ══ -->
-<section class="section" id="featured">
-  <div class="section-header">
-    <span class="section-num">03</span>
-    <div class="section-rule"></div>
-    <span class="section-lbl">Featured Work</span>
-  </div>
-  <div class="project-layout">
-    <div class="project-sidebar">
-      <div class="proj-meta-item">
-        <p class="proj-meta-label">Duration</p>
-        <span class="proj-meta-val">6 years</span>
-      </div>
-      <div class="proj-meta-item">
-        <p class="proj-meta-label">Roles</p>
-        <span class="proj-meta-val">Product Design Engineer</span>
-        <span class="proj-meta-val">Research Associate, Electrical Computer Engineering Dpt.</span>
-        <span class="proj-meta-val" style="color:var(--text-dim);font-style:italic;">(concurrent)</span>
-      </div>
-      <div class="proj-meta-item">
-        <p class="proj-meta-label">Domains</p>
-        <span class="proj-meta-val">Medtech / neurotechnology</span>
-        <span class="proj-meta-val">Clinical usability</span>
-        <span class="proj-meta-val">Hardware development</span>
-        <span class="proj-meta-val">Research operations</span>
-      </div>
-    </div>
-    <div>
-      <!-- ═══════════════════════════════════════════
-           FEATURED WORK SLIDESHOW
-           Add images inside each .slide div:
-           <img src="your-image.jpg" alt="description">
-           Add or remove .slide divs as needed
-           ═══════════════════════════════════════════ -->
-      <div class="slideshow" id="ss-featured" style="margin-bottom:2.5rem;aspect-ratio:16/9;">
-        <div class="slide active"><img src="Sevo-3.jpg" alt="EEG prototype" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="science.ads7375-f1.jpg" alt="EEG process" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="SevoElectrodes_ScienceNews.jpg" alt="EEG electrodes" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="SA-Sevo-3.jpg" alt="Sevo clinical-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="sevopic.jpg" alt="EEG device" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="pngroup.jpg" alt="PN Prize" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="neuroracism.jpg" alt="#Neuroracism Flyer" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="SA-Sevo-1.jpg" alt="Sevo SA-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="SA-Sevo-2.jpg" alt="Sevo SA-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="SA-Sevo-5.jpg" alt="Sevo SA-5" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <button class="slide-arrow prev" onclick="slideNav('ss-featured',-1)">‹</button>
-        <button class="slide-arrow next" onclick="slideNav('ss-featured',1)">›</button>
-        <div class="slide-controls" id="ss-featured-dots"></div>
-      </div>
-      <h3 class="project-main-title">Wearable EEG Interface Design</h3>
-      <div class="project-body">
-        <p>What starts as a design problem rarely stays one. For six years I held two concurrent roles on the same project — product design engineer and ECE researcher — contributing simultaneously at the fabrication bench, the coordination table, and the publication stage.</p>
-        <p>On the design side: I prototyped and tested research-grade wearable EEG devices using SolidWorks and digital fabrication, advised on hair and scalp interface usability and accessibility, managed design documentation for accuracy and repeatability, and led initial FDA application materials.</p>
-        <p>On the research side: I coordinated testing across four international sites, developed standardized intake procedures, partnered with clinicians and vendors on system evaluation, supported grant writing and reporting, and co-authored multiple peer-reviewed publications.</p>
-        <p class="project-pullquote">Holding both roles simultaneously meant I was constantly translating — between making and managing, between technical requirements and human needs, between what was built and what needed to be communicated.</p>
-        <p>That's the kind of work I do best.</p>
-
-        <!-- ═══════════════════════════════════════════
-             SPOTIFY PODCAST EMBED
-             1. Go to your podcast episode on Spotify
-             2. Click ··· → Share → Embed episode
-             3. Copy the src URL from the embed code
-             4. Paste it into the src attribute below
-             ═══════════════════════════════════════════ -->
-        <div style="margin-top:2.5rem;">
-          <p style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--lavender-dim);margin-bottom:1rem;">Featured on</p>
-          <iframe
-            src="https://open.spotify.com/embed/episode/2UbfqpaUDKUsU2DdvyiKSx?utm_source=generator"
-            width="100%"
-            height="152"
-            frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style="border-radius:4px;">
-          </iframe>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
