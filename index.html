@@ -393,10 +393,10 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     <!-- 3D / CAD SLIDESHOW -->
      <div class="work-item">
        <div class="slideshow" id="ss-3d">
-         <div class="slide active"><img src="3d-1.jpg" alt="3D render 1" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-         <div class="slide"><img src="3d-1-2.jpg" alt="3D render 2" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-         <div class="slide"><img src="3d-2.jpg" alt="3D render 3" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-         <div class="slide"><img src="3d-3.jpg" alt="3D render 4" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+         <div class="slide active"><img src="3d-1.jpg" alt="3D render 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="3d-1-2.jpg" alt="3D render 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="3d-2.jpg" alt="3D render 3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="3d-3.jpg" alt="3D render 4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <div class="slide-dot-color" style="background:var(--lime);"></div>
          <button class="slide-arrow prev" onclick="slideNav('ss-3d',-1)">‹</button>
          <button class="slide-arrow next" onclick="slideNav('ss-3d',1)">›</button>
@@ -893,9 +893,6 @@ function slideNav(id, dir) {
 
 ['ss-eeg','ss-3d','ss-gd','ss-ux','ss-featured','ss-p1','ss-p2','ss-p3'].forEach(initSlideshow);
 
-setInterval(() => {
-  ['ss-3d','ss-gd'].forEach(id => { const s = slideshowState[id]; if (s) goToSlide(id, s.current + 1); });
-}, 3500);
 
 // ── PROJECT DROPDOWNS ──
 function toggleProject(id) {
