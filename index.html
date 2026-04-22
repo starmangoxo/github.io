@@ -264,10 +264,17 @@ nav {
 .contact-headline .period { color: var(--red); }
 .contact-sub { font-size: 12px; color: var(--text); line-height: 1.85; max-width: 300px; }
 .connect-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); margin-bottom: 1.25rem; }
+
 .connect-link { display: block; font-size: 13px; color: var(--text-dim); line-height: 2.3; transition: color 0.2s ease; }
-.connect-link[data-idx="0"]:hover { color: var(--blue); }
-.connect-link[data-idx="1"]:hover { color: var(--lavender); }
-.connect-link[data-idx="2"]:hover { color: var(--amber); }
+.connect-link[data-role="email"]:hover { color: var(--blue); }
+.connect-link[data-role="linkedin"]:hover { color: var(--blue); }
+.connect-link[data-role="arena"]:hover { color: var(--green); }
+.connect-link[data-role="site"]:hover { color: var(--purple); }
+.connect-link[data-role="location"] { color: var(--amber); cursor: default; }
+.connect-link[data-role="resume"]:hover { color: var(--blue); }
+
+.connect-sub { display: block; font-size: 13px; color: var(--text-dim); font-style: italic; line-height: 2.3; }
+
      
 
 /* ── FOOTER ── */
@@ -810,14 +817,14 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
   <div>
     <p class="connect-heading">Connect</p>
-    <a class="connect-link" data-idx="0" href="mailto:evangeline7ma@gmail.com">evangeline7ma@gmail.com</a>
-    <a class="connect-link" data-idx="0" href="https://linkedin.com/in/evangelinema" target="_blank">LinkedIn</a>
-    <a class="connect-link" data-idx="0" href="https://are.na/star-pearl" target="_blank">Are.na</a>
-    <a class="connect-link" data-idx="1" href="https://evangelinema.com" target="_blank">Full site →</a>
+    <a class="connect-link" data-role="email" href="mailto:evangeline7ma@gmail.com">evangeline7ma@gmail.com</a>
+    <a class="connect-link" data-role="linkedin" href="https://linkedin.com/in/evangelinema" target="_blank">LinkedIn</a>
+    <a class="connect-link" data-role="arena" href="https://are.na/star-pearl" target="_blank">Are.na</a>
+    <a class="connect-link" data-role="site" href="https://evangelinema.com" target="_blank">Full site →</a>
   </div>
   <div>
     <p class="connect-heading">Location</p>
-    <span class="connect-link" data-idx="2">[ WHEREVER THE SUN IS SHINING ]</span>
+    <span class="connect-link" data-role="location">[ WHEREVER THE SUN IS SHINING ]</span>
     <span style="display:block;font-size:13px;color:var(--text-dim);font-style:italic;line-height:2.3;">Open to remote</span>
   </div>
   <!-- ═══════════════════════════════════════════
@@ -825,7 +832,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
        ═══════════════════════════════════════════ -->
   <div>
     <p class="connect-heading">Resume</p>
-    <a class="connect-link" data-idx="3" href="https://LINK-TO-YOUR-RESUME.com" target="_blank">View full resume →</a>
+    <a class="connect-link" data-role="resume" href="https://LINK-TO-YOUR-RESUME.com" target="_blank">View full resume →</a>
   </div>
 </section>
 
