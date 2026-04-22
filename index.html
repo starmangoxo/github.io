@@ -51,7 +51,14 @@ nav {
   justify-content: space-between;
   align-items: flex-start;
   padding: 1.75rem 2.5rem;
-  background: linear-gradient(to bottom, rgba(10,10,10,0.97) 0%, transparent 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,10,1) 0%,      /* fully black at top */
+    rgba(10,10,10,0.98) 30%,  /* stays very dark longer */
+    rgba(10,10,10,0.9) 55%,   /* slow fade */
+    rgba(10,10,10,0.6) 75%,
+    rgba(10,10,10,0) 100%     /* fade out */
+  );
 }
 .nav-logo { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); }
 .nav-links { display: flex; gap: 2.5rem; }
@@ -133,7 +140,7 @@ nav {
 .intro-headline { font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.25; color: var(--text-mid); max-width: 900px; font-weight: 400; margin-bottom: 2rem; }
 .intro-headline em { font-style: italic; color: var(--red); }
 .intro-headline em.lime { color: var(--lime); }
-.intro-body { max-width: 1000px; font-size: 14px; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.25rem; }
+.intro-body { max-width: 1700px; font-size: 12px; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.25rem; }
 
 
 /* ── FEATURED WORK ── */
