@@ -266,6 +266,7 @@ nav {
 .connect-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); margin-bottom: 1.25rem; }
 .connect-link { display: block; font-size: 13px; color: var(--text-dim); line-height: 2.3; transition: color 0.15s; }
 /* .connect-link:hover { color: var(--lavender); } */
+.connect-link {color: var(--text); transition: color 0.2s ease; }
 .connect-link[data-idx="0"] { color: var(--blue); }
 .connect-link[data-idx="1"] { color: var(--lavender); }
 .connect-link[data-idx="2"] { color: var(--amber); }
@@ -818,14 +819,14 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
   <div>
     <p class="connect-heading">Location</p>
-    <span class="connect-link"> data-idx="2"[ WHEREVER THE SUN IS SHINING ]</span>
+    <span class="connect-link" data-idx="2">[ WHEREVER THE SUN IS SHINING ]</span>
     <span style="display:block;font-size:13px;color:var(--text-dim);font-style:italic;line-height:2.3;">Open to remote</span>
   </div>
   <!-- ═══════════════════════════════════════════
        RESUME — replace URL with your resume link
        ═══════════════════════════════════════════ -->
   <div>
-    <p class="connect-heading">Resume</p>
+    <p class="connect-heading" data-idx="0">Resume</p>
     <a class="connect-link" href="https://LINK-TO-YOUR-RESUME.com" target="_blank">View full resume →</a>
   </div>
 </section>
