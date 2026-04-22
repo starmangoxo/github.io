@@ -231,7 +231,7 @@ nav {
 
 /* PROFILE PHOTO */
 .profile-photo-wrap {
-  width: 100%;
+  width: 75%;
   aspect-ratio: 3/4;
   background: var(--bg3);
   border: 1px solid var(--rule);
@@ -239,7 +239,7 @@ nav {
   margin-bottom: 2rem;
   position: relative;
 }
-.profile-photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.profile-photo-wrap img { width: 75%; height: 75%; object-fit: cover; display: block; }
 .profile-photo-placeholder {
   position: absolute; inset: 0;
   display: flex; flex-direction: column;
@@ -264,12 +264,10 @@ nav {
 .contact-headline .period { color: var(--red); }
 .contact-sub { font-size: 12px; color: var(--text); line-height: 1.85; max-width: 300px; }
 .connect-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); margin-bottom: 1.25rem; }
-.connect-link { display: block; font-size: 13px; color: var(--text-dim); line-height: 2.3; transition: color 0.15s; }
-/* .connect-link:hover { color: var(--lavender); } */
-.connect-link {color: var(--text); transition: color 0.2s ease; }
-.connect-link[data-idx="0"] { color: var(--blue); }
-.connect-link[data-idx="1"] { color: var(--lavender); }
-.connect-link[data-idx="2"] { color: var(--amber); }
+.connect-link { display: block; font-size: 13px; color: var(--text-dim); line-height: 2.3; transition: color 0.2s ease; }
+.connect-link[data-idx="0"]:hover { color: var(--blue); }
+.connect-link[data-idx="1"]:hover { color: var(--lavender); }
+.connect-link[data-idx="2"]:hover { color: var(--amber); }
      
 
 /* ── FOOTER ── */
@@ -826,8 +824,8 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
        RESUME — replace URL with your resume link
        ═══════════════════════════════════════════ -->
   <div>
-    <p class="connect-heading" data-idx="0">Resume</p>
-    <a class="connect-link" href="https://LINK-TO-YOUR-RESUME.com" target="_blank">View full resume →</a>
+    <p class="connect-heading">Resume</p>
+    <a class="connect-link" data-idx="3" href="https://LINK-TO-YOUR-RESUME.com" target="_blank">View full resume →</a>
   </div>
 </section>
 
