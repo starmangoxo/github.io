@@ -36,6 +36,12 @@
   --mono: 'IBM Plex Mono', 'Courier New', monospace;  
   --sans: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
+[class*="serif"], .contact-headline, .section-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
 }
 
 html { background: var(--bg); color: var(--text); font-family: var(--mono); font-size: 14px; line-height: 1.6; scroll-behavior: smooth; }
@@ -204,7 +210,7 @@ nav {
 
 .proj-num { font-size: 10px; color: var(--amber); letter-spacing: 0.12em; margin-bottom: 0.75rem; }
 .proj-title { font-family: var(--serif); font-size: 1.3rem; color: var(--text); font-weight: 400; margin-bottom: 0.75rem; line-height: 1.2; }
-.proj-short { font-size: 11px; color: var(--text); line-height: 1.75; max-width: 500px; }
+.proj-short { font-size: 11px; color: var(--text); line-height: 1.75; max-width: 650px; }
 
 .proj-toggle { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-top: 1rem; display: flex; align-items: center; gap: 6px; transition: color 0.15s; user-select: none; }
 .proj-toggle .arrow { display: inline-block; transition: transform 0.3s; }
