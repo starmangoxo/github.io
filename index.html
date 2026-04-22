@@ -19,7 +19,7 @@
   --bg3: #161616;
   --text: #e8e4dc;
   --text-dim: #ffffff; /* body text color - previous gray color - #555552 (gray) */
-  --text-mid: #ffffff; /* title color c8c4bc (light gray), ffffff*/
+  --text-mid: #c8c4bc; /* title color c8c4bc (light gray), ffffff*/
      
   --red: #d63c2f;
   --lime: #b5d400;
@@ -173,11 +173,11 @@ nav {
 .proj-slideshow-mini { width: 260px; aspect-ratio: 3/2; background: var(--bg3); position: relative; overflow: hidden; flex-shrink: 0; }
 .proj-slideshow-mini .slide { display: flex; align-items: center; justify-content: center; }
 
-.proj-num { font-size: 10px; color: var(--green-dim); letter-spacing: 0.12em; margin-bottom: 0.75rem; }
+.proj-num { font-size: 10px; color: var(--lavender-dim); letter-spacing: 0.12em; margin-bottom: 0.75rem; }
 .proj-title { font-family: var(--serif); font-size: 1.3rem; color: var(--text); font-weight: 400; margin-bottom: 0.75rem; line-height: 1.2; }
 .proj-short { font-size: 11px; color: var(--text-dim); line-height: 1.75; max-width: 500px; }
 
-.proj-toggle { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dim); margin-top: 1rem; display: flex; align-items: center; gap: 6px; transition: color 0.15s; user-select: none; }
+.proj-toggle { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lavender-dim); margin-top: 1rem; display: flex; align-items: center; gap: 6px; transition: color 0.15s; user-select: none; }
 .proj-toggle .arrow { display: inline-block; transition: transform 0.3s; }
 .proj-toggle.open .arrow { transform: rotate(90deg); }
 .proj-toggle:hover { color: var(--green); }
@@ -189,7 +189,7 @@ nav {
 .proj-detail-text:last-child { margin-bottom: 0; }
 .proj-components { list-style: none; margin: 1rem 0; }
 .proj-components li { font-size: 12px; color: var(--text-mid); line-height: 1.8; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem; }
-.proj-components li::before { content: '—'; position: absolute; left: 0; color: var(--green-dim); }
+.proj-components li::before { content: '—'; position: absolute; left: 0; color: var(--lavender-dim); }
 .proj-component-name { color: var(--green); }
 
 /* ── ABOUT ── */
@@ -220,7 +220,7 @@ nav {
 .profile-photo-placeholder span { font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); text-align: center; line-height: 1.8; }
 
 .sidebar-section { margin-bottom: 2.5rem; }
-.sidebar-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+.sidebar-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
 .sidebar-item { font-size: 12px; color: var(--text-mid); line-height: 2.1; display: block; }
 
 /* ── FEATURED WORK ── */
@@ -240,12 +240,12 @@ nav {
 .pub-year { font-size: 11px; color: var(--blue); letter-spacing: 0.05em; padding-top: 2px; }
 .pub-title { font-size: 12px; color: var(--text); line-height: 1.65; margin-bottom: 0.35rem; }
 .pub-journal { font-size: 11px; color: var(--text-mid); font-style: italic; }
-.pub-arrow a { font-size: 11px; color: var(--text-dim); transition: color 0.15s; }
-.pub-item:hover .pub-arrow a { color: var(--blue); }
+.pub-arrow a { font-size: 11px; color: var(--blue); transition: color 0.15s; }
+.pub-item:hover .pub-arrow a { color: var(--text-dim); }
 
 /* ── SKILLS ── */
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem 4rem; }
-.skill-group-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow-dim); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+.skill-group-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
 .skill-item { font-size: 12px; color: var(--text-dim); line-height: 2.1; display: block; }
 
 /* ── CONTACT ── */
