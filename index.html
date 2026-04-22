@@ -184,13 +184,13 @@ nav {
 
 .work-meta { padding: 1.5rem; border-top: 1px solid var(--rule); }
 .work-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
-.work-title { font-size: 13px; font-weight: 400; color: var(--blue); }
+.work-title { font-size: 13px; font-weight: 400; color: var(--lime); }
 .work-title-arrow { font-size: 11px; color: var(--text-dim); margin-left: 4px; }
-.work-year { font-size: 11px; color: var(--text-dim); letter-spacing: 0.05em; }
+.work-year { font-size: 11px; color: var(--text); letter-spacing: 0.05em; }
 .work-desc { font-size: 11px; color: var(--text); line-height: 1.75; margin-bottom: 1rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .work-tag { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--rule); padding: 3px 8px; transition: border-color 0.15s, color 0.15s; }
-.work-tag:hover { border-color: var(--blue-dim); color: var(--blue); }
+.work-tag:hover { border-color: var(--lime); color: var(--lime); }
 
      
 /* ── ADDITIONAL PROJECTS ── */
@@ -202,14 +202,14 @@ nav {
 .proj-slideshow-mini { width: 260px; aspect-ratio: 3/2; background: var(--bg3); position: relative; overflow: hidden; flex-shrink: 0; }
 .proj-slideshow-mini .slide { display: flex; align-items: center; justify-content: center; }
 
-.proj-num { font-size: 10px; color: var(--yellow); letter-spacing: 0.12em; margin-bottom: 0.75rem; }
+.proj-num { font-size: 10px; color: var(--amber); letter-spacing: 0.12em; margin-bottom: 0.75rem; }
 .proj-title { font-family: var(--serif); font-size: 1.3rem; color: var(--text); font-weight: 400; margin-bottom: 0.75rem; line-height: 1.2; }
 .proj-short { font-size: 11px; color: var(--text); line-height: 1.75; max-width: 500px; }
 
 .proj-toggle { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-top: 1rem; display: flex; align-items: center; gap: 6px; transition: color 0.15s; user-select: none; }
 .proj-toggle .arrow { display: inline-block; transition: transform 0.3s; }
 .proj-toggle.open .arrow { transform: rotate(90deg); }
-.proj-toggle:hover { color: var(--yellow); }
+.proj-toggle:hover { color: var(--amber); }
 
 .proj-details { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; padding: 0 2rem; }
 .proj-details.open { max-height: 1200px; padding: 2rem; border-top: 1px solid var(--rule); }
@@ -227,7 +227,7 @@ nav {
 .about-headline em { font-style: italic; }
 .about-headline .red { color: var(--red); }
 .about-headline .lime { color: var(--lime); }
-.about-body p { font-size: 12px; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; max-width: 540px; }
+.about-body p { font-size: 12px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 540px; }
 
 /* PROFILE PHOTO */
 .profile-photo-wrap {
@@ -256,7 +256,7 @@ nav {
 /* ── SKILLS ── */
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem 4rem; }
 .skill-group-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lime); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
-.skill-item { font-size: 12px; color: var(--text-dim); line-height: 2.1; display: block; }
+.skill-item { font-size: 12px; color: var(--text); line-height: 2.1; display: block; }
 
 /* ── CONTACT ── */
 #contact { padding: 8rem 2.5rem; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4rem; align-items: start; }
@@ -265,7 +265,11 @@ nav {
 .contact-sub { font-size: 12px; color: var(--text-dim); line-height: 1.85; max-width: 300px; }
 .connect-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dim); margin-bottom: 1.25rem; }
 .connect-link { display: block; font-size: 13px; color: var(--text-dim); line-height: 2.3; transition: color 0.15s; }
-.connect-link:hover { color: var(--lavender); }
+/* .connect-link:hover { color: var(--lavender); } */
+.connect-link[data-idx="0"] { color: var(--blue); }
+.connect-link[data-idx="1"] { color: var(--lavender); }
+.connect-link[data-idx="2"] { color: var(--amber); }
+     
 
 /* ── FOOTER ── */
 footer { padding: 1.5rem 2.5rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
@@ -464,7 +468,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     <div class="section-rule"></div>
     <span class="section-lbl">Research &amp; Publications</span>
   </div>
-  <p style="font-size:12px;color:var(--text-dim);margin-bottom:2.5rem;max-width:700px;line-height:1.8;">
+  <p style="font-size:12px;color:var(--text);margin-bottom:2.5rem;max-width:700px;line-height:1.8;">
     Selected co-authored publications from work on wearable EEG systems at the intersection of neurotechnology, clinical usability, and human-centered design.
   </p>
   <!-- ═══════════════════════════════════════════
@@ -807,14 +811,14 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
   <div>
     <p class="connect-heading">Connect</p>
-    <a class="connect-link" href="mailto:evangeline7ma@gmail.com">evangeline7ma@gmail.com</a>
-    <a class="connect-link" href="https://linkedin.com/in/evangelinema" target="_blank">LinkedIn</a>
-    <a class="connect-link" href="https://are.na/star-pearl" target="_blank">Are.na</a>
-    <a class="connect-link" href="https://evangelinema.com" target="_blank">Full site →</a>
+    <a class="connect-link" data-idx="0" href="mailto:evangeline7ma@gmail.com">evangeline7ma@gmail.com</a>
+    <a class="connect-link" data-idx="0" href="https://linkedin.com/in/evangelinema" target="_blank">LinkedIn</a>
+    <a class="connect-link" data-idx="0" href="https://are.na/star-pearl" target="_blank">Are.na</a>
+    <a class="connect-link" data-idx="1" href="https://evangelinema.com" target="_blank">Full site →</a>
   </div>
   <div>
     <p class="connect-heading">Location</p>
-    <span class="connect-link">[ WHEREVER THE SUN IS SHINING ]</span>
+    <span class="connect-link"> data-idx="2"[ WHEREVER THE SUN IS SHINING ]</span>
     <span style="display:block;font-size:13px;color:var(--text-dim);font-style:italic;line-height:2.3;">Open to remote</span>
   </div>
   <!-- ═══════════════════════════════════════════
