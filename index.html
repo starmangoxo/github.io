@@ -135,7 +135,19 @@ nav {
 .intro-headline em.lime { color: var(--lime); }
 .intro-body { font-family: var(--sans); font-weight: 150; max-width: 1000px; font-size: 14px; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.25rem; }
 
-/* ── WORK GRID ── */
+
+/* ── FEATURED WORK ── */
+.project-layout { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; }
+.project-sidebar { position: sticky; top: 6rem; }
+.proj-meta-item { margin-bottom: 2rem; }
+.proj-meta-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
+.proj-meta-val { font-size: 12px; color: var(--text-mid); line-height: 1.9; display: block; }
+.project-main-title { font-family: var(--serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--text); margin-bottom: 2rem; line-height: 1.2; }
+.project-body p { font-size: 12px; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; max-width: 600px; }
+.project-pullquote { font-family: var(--serif); font-size: 1.15rem; color: var(--text-mid); border-left: 2px solid var(--blue); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; line-height: 1.5; max-width: 560px; }
+
+
+/* ── SELECTED WORK GRID ── */
 .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); }
 .work-item { background: var(--bg2); display: flex; flex-direction: column; }
 
@@ -156,7 +168,7 @@ nav {
 
 .work-meta { padding: 1.5rem; border-top: 1px solid var(--rule); }
 .work-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
-.work-title { font-size: 13px; font-weight: 400; color: var(--text); }
+.work-title { font-size: 13px; font-weight: 400; color: var(--blue); }
 .work-title-arrow { font-size: 11px; color: var(--text-dim); margin-left: 4px; }
 .work-year { font-size: 11px; color: var(--text-dim); letter-spacing: 0.05em; }
 .work-desc { font-size: 11px; color: var(--text-dim); line-height: 1.75; margin-bottom: 1rem; }
@@ -164,16 +176,7 @@ nav {
 .work-tag { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--rule); padding: 3px 8px; transition: border-color 0.15s, color 0.15s; }
 .work-tag:hover { border-color: var(--blue-dim); color: var(--blue); }
 
-/* ── FEATURED WORK ── */
-.project-layout { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; }
-.project-sidebar { position: sticky; top: 6rem; }
-.proj-meta-item { margin-bottom: 2rem; }
-.proj-meta-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
-.proj-meta-val { font-size: 12px; color: var(--text-mid); line-height: 1.9; display: block; }
-.project-main-title { font-family: var(--serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--text); margin-bottom: 2rem; line-height: 1.2; }
-.project-body p { font-size: 12px; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; max-width: 600px; }
-.project-pullquote { font-family: var(--serif); font-size: 1.15rem; color: var(--text-mid); border-left: 2px solid var(--blue); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; line-height: 1.5; max-width: 560px; }
-
+     
 /* ── ADDITIONAL PROJECTS ── */
 .project-cards { display: flex; flex-direction: column; gap: 1px; background: var(--rule); }
 .proj-card { background: var(--bg2); }
