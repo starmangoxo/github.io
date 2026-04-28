@@ -647,8 +647,67 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
       <p class="proj-title">Who Are You?</p>
       <p class="proj-short">An interactive zoetrope installation designed to prompt introspection. The piece changes in response to the viewer's presence — their proximity alters what they see.</p>
       <div class="proj-toggle" id="p2-toggle">
-        <span clas
+        <span class="arrow">›</span><span class="toggle-label"> View process</span>
+      </div>
+    </div>
+    <div class="proj-slideshow-mini" id="ss-p2">
+      <div class="slide active"><img src="P2-1.jpeg" alt="P2-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-2.jpeg" alt="P2-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-3.jpeg" alt="P2-3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-4.jpeg" alt="P2-4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-5.jpeg" alt="P2-5" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-6.jpeg" alt="P2-6" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-7.jpeg" alt="P2-7" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-8.jpeg" alt="P2-8" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-9.jpeg" alt="P2-9" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-12.jpeg" alt="P2-12" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P2-13.jpeg" alt="P2-13" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p2',-1)">‹</button>
+      <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p2',1)">›</button>
+    </div>
+  </div>
+  <div class="proj-details" id="p2-details">
+    <p class="proj-detail-text">The title "Who Are You?" was designed to force introspection for guests who encounter the piece — meant for people to ponder how they see themselves, not to answer the question, but to sit with it.</p>
+    <p class="proj-detail-text">The device is built from three main active components working together to create its effect:</p>
+    <ul class="proj-components">
+      <li><span class="proj-component-name">Stepper Motor</span> — drives the rotation of the Zoetrope, controlling the speed and rhythm of the animation.</li>
+      <li><span class="proj-component-name">Two Ultrasound Sensors</span> — one detects the viewer's approach and starts the machine; the second tracks proximity to shift the RGB light.</li>
+      <li><span class="proj-component-name">RGB LED Strip</span> — strobes the Zoetrope at precise intervals, creating the illusion of motion from still images.</li>
+    </ul>
+    <p class="proj-detail-text">This simple mechanism carries a surprisingly layered narrative. The viewer is drawn in by the mesmerizing effect but quickly realizes their presence is shaping what they see. A mirror at the back of the installation extends this — placing the visitor inside the piece itself, not just in front of it.</p>
+  </div>
+</div>
 
+<!-- PROJECT 3 -->
+<div class="proj-card">
+  <div class="proj-header" onclick="toggleProject('p3')">
+    <div>
+      <p class="proj-num">Project 03</p>
+      <p class="proj-title">Retractable Rain Hood</p>
+      <p class="proj-short">A human-centered design project developed in collaboration with a wheelchair user, addressing rain protection without compromising hand strength or mobility.</p>
+      <div class="proj-toggle" id="p3-toggle">
+        <span class="arrow">›</span><span class="toggle-label"> View process</span>
+      </div>
+    </div>
+    <div class="proj-slideshow-mini" id="ss-p3">
+      <div class="slide active"><img src="IMG_2920.jpg" alt="P3-full" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P3-1.jpeg" alt="P3-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P3-3.jpeg" alt="P3-3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P3-6.jpeg" alt="P3-6" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P3-14.jpeg" alt="P3-14" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p3',-1)">‹</button>
+      <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p3',1)">›</button>
+    </div>
+  </div>
+  <div class="proj-details" id="p3-details">
+    <p class="proj-detail-text">Our client uses a wheelchair and has limited hand strength — making standard umbrellas effectively inaccessible. The brief was to design a solution that protected her from rain while keeping her hands free and in control of her chair.</p>
+    <p class="proj-detail-text">After working directly with the client through a series of meetings, we developed a retractable hood system that could be operated with minimal grip strength and without interrupting her ability to maneuver. The design was shaped entirely around her specific physical constraints and daily routines — not a general-purpose product, but something made for one person's real life.</p>
+    <p class="proj-detail-text">[ Add materials, fabrication process, testing notes, or final outcome here. ]</p>
+  </div>
+</div>
+</section>
+
+     
      <!-- ══ ABOUT ══ -->
 <section class="section" id="about">
   <div class="section-header">
