@@ -176,10 +176,10 @@ nav {
 .slide.active { opacity: 1; }
 .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .slide-placeholder { font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); text-align: center; line-height: 2; }
-.slide-dot-color { position: absolute; top: 1rem; right: 1rem; width: 10px; height: 10px; border-radius: 50%; z-index: 3; }
+/*.slide-dot-color { position: absolute; top: 1rem; right: 1rem; width: 10px; height: 10px; border-radius: 50%; z-index: 3; } */
 .slide-controls { position: absolute; bottom: 0.75rem; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 6px; z-index: 3; }
-.slide-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-dim); opacity: 0.35; cursor: pointer; transition: opacity 0.2s; border: none; padding: 0; }
-.slide-dot.on { opacity: 1; background: var(--text); }
+/*.slide-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-dim); opacity: 0.35; cursor: pointer; transition: opacity 0.2s; border: none; padding: 0; } */
+/*.slide-dot.on { opacity: 1; background: var(--text); } */
 .slide-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-dim); font-size: 18px; cursor: pointer; padding: 0.5rem 0.75rem; transition: color 0.15s; z-index: 3; }
 .slide-arrow:hover { color: var(--text); }
 .slide-arrow.prev { left: 0; }
@@ -535,7 +535,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
          <div class="slide"><img src="3d-1-2.jpg" alt="3D render 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <div class="slide"><img src="3d-2.jpg" alt="3D render 3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <div class="slide"><img src="3d-3.jpg" alt="3D render 4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide-dot-color" style="background:var(--lime);"></div>
+         /* <div class="slide-dot-color" style="background:var(--lime);"></div> */
          <button class="slide-arrow prev" onclick="slideNav('ss-3d',-1)">‹</button>
          <button class="slide-arrow next" onclick="slideNav('ss-3d',1)">›</button>
          <div class="slide-controls" id="ss-3d-dots"></div>
@@ -559,7 +559,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
          <div class="slide active"><img src="avenir design.png" alt="Avenir design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <div class="slide"><img src="EMA-ATTWLCover-16x20.jpg" alt="Cover design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <div class="slide"><img src="PROOF-FLYER copy.jpg" alt="Flyer design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide-dot-color" style="background:var(--lavender);"></div>
+         /* <div class="slide-dot-color" style="background:var(--lavender);"></div> */
          <button class="slide-arrow prev" onclick="slideNav('ss-gd',-1)">‹</button>
          <button class="slide-arrow next" onclick="slideNav('ss-gd',1)">›</button>
          <div class="slide-controls" id="ss-gd-dots"></div>
@@ -582,7 +582,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
        <div class="slideshow" id="ss-ux">
          <div class="slide active"><img src="UX-1.jpg" alt="UX research 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <div class="slide"><img src="UX-2.jpg" alt="UX research 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide-dot-color" style="background:#60a5fa;"></div>
+         /* <div class="slide-dot-color" style="background:#60a5fa;"></div> */
          <button class="slide-arrow prev" onclick="slideNav('ss-ux',-1)">‹</button>
          <button class="slide-arrow next" onclick="slideNav('ss-ux',1)">›</button>
          <div class="slide-controls" id="ss-ux-dots"></div>
@@ -615,7 +615,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
 <div class="proj-card">
   <div class="proj-header" onclick="toggleProject('p1')">
     <div>
-      <p class="proj-num">Project 01</p>
+      <p class="proj-num">PROJECT 01</p>
       <p class="proj-title">Responsive On-Body Fragility Indication</p>
       <p class="proj-short">A wearable system designed to sense and communicate fragility states — exploring the intersection of the body, material feedback, and responsive design.</p>
       <div class="proj-toggle" id="p1-toggle">
@@ -644,7 +644,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
 <div class="proj-card">
   <div class="proj-header" onclick="toggleProject('p2')">
     <div>
-      <p class="proj-num">Project 02</p>
+      <p class="proj-num">PROJECT 02</p>
       <p class="proj-title">Who Are You?</p>
       <p class="proj-short">An interactive zoetrope installation designed to prompt introspection. The piece changes in response to the viewer's presence — their proximity alters what they see.</p>
       <div class="proj-toggle" id="p2-toggle">
@@ -683,7 +683,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
 <div class="proj-card">
   <div class="proj-header" onclick="toggleProject('p3')">
     <div>
-      <p class="proj-num">Project 03</p>
+      <p class="proj-num">PROJECT 03</p>
       <p class="proj-title">Retractable Rain Hood</p>
       <p class="proj-short">A human-centered design project developed in collaboration with a wheelchair user, addressing rain protection without compromising hand strength or mobility.</p>
       <div class="proj-toggle" id="p3-toggle">
