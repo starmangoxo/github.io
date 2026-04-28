@@ -88,7 +88,7 @@ nav {
   position: relative;
 }
 .hero-left-rule { position: absolute; left: 2.5rem; top: 10%; bottom: 10%; width: 1px; background: var(--red); opacity: 0.5; }
-.hero-available { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 2rem; padding-left: 2rem; }
+.hero-available { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 2rem; padding-left: 2rem; }
 
 .hero-headline {
   font-family: var(--serif);
@@ -129,9 +129,9 @@ nav {
 .hero-blurb {
   margin-top: 3rem;
   padding-left: 2rem;
-  max-width: 800px;
-  font-family: var(--sans);  /* SANS */
-  font-size: 14px;
+  max-width: 900px;
+  /*font-family: var(--mono);*/
+  font-size: 12px;
   font-weight: 200;
   /* color: var(--text); */
   line-height: 1.85;
@@ -335,14 +335,17 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   <p class="hero-available">Available for select projects</p>
 
   <h1 class="hero-headline">
-    <span class="hero-p1">
-      <span class="hover-word" data-idx="0">Engineer</span> by training,
-      <span class="hover-word" data-idx="1">artist</span> by practice<span class="lime-period">.</span>
-    </span>
-    <span class="hero-p2">
-       Most people pick one. I live in <span class="hover-word" data-idx="2">that gap</span>, and I've found it's exactly where the <span class="hover-word" data-idx="3">best problems</span> are<span class="lime-period">.</span>
-    </span>
-  </h1>
+  <span class="hero-p1">
+    <span class="hover-word" data-idx="0">Engineer</span> by training,
+    <span class="hover-word" data-idx="1">artist</span> by practice<span class="lime-period">.</span>
+  </span>
+
+  <span class="hero-line-break"></span>
+
+  <span class="hero-p2">
+    Most people pick one. I live in <span class="hover-word" data-idx="2">that gap</span>, and I've found it's exactly where the <span class="hover-word" data-idx="3">best problems</span> are<span class="lime-period">.</span>
+  </span>
+</h1>
 
   <div class="hero-annotation" id="hero-ann">
     <div class="hero-ann-inner">
