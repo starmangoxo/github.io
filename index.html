@@ -610,105 +610,44 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
 
   <div class="project-cards">
 
-    <!-- PROJECT 1 -->
-    <div class="proj-card">
-      <div class="proj-header" onclick="toggleProject('p1')">
-        <div>
-          <p class="proj-num">Project 01</p>
-          <p class="proj-title">Responsive On-Body Fragility Indication</p>
-          <p class="proj-short">A wearable system designed to sense and communicate fragility states — exploring the intersection of the body, material feedback, and responsive design.</p>
-          <div class="proj-toggle" id="p1-toggle">
-            <span class="arrow">›</span><span class="toggle-label"> View process</span>
-          </div>
-        </div>
-        <div class="proj-slideshow-mini" id="ss-p1">
-          <div class="slide"><img src="DSC05579.png" alt="OPEN" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide"><img src="P1-Closed.png" alt="CLOSED" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide"><img src="P1-Sketch.png" alt="Sketch" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide"><img src="P1-Test.png" alt="Test" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p1',-1)">‹</button>
-          <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p1',1)">›</button>
-        </div>
-      </div>
-      <div class="proj-details" id="p1-details">
-        <p class="proj-detail-text">Overview: A wearable head accessory for patients recovering from brain or head injuries. The project addresses a real gap: people in recovery are physically vulnerable in public but have no reliable, non-verbal way to communicate that to strangers around them.</p>
-        <p class="proj-detail-text">The Problem: There are almost no social conventions for signaling bodily fragility in public. And verbal communication is not always accessible or comfortable for someone in recovery. The idea was to let an object carry that burden instead of the person.</p>
-        <p class="proj-detail-text">Design Process: Early sketches explored two inflation behaviors as distinct visual languages: bulbous forms for a protective, padded look, and pointy spike forms for a more active warning signal. Three physical prototypes followed, testing different structural approaches to inflatable geometry with fabric and air manifolds. A flat cut template was developed to fold into repeating diamond-spike modules, which made the form reproducible and iterable. The final prototype used a red fabric base with dark inflatable spike panels, showing both the protective silhouette and the social signaling function.</p>
-        <p class="proj-detail-text">Technical System: The prototype included a photoresistor sensor that detected changes in ambient light, which triggered a small air pump to inflate the spike structures. The inflation happens passively and automatically, no input required from the wearer. That was an important constraint given the user's limited cognitive and physical bandwidth during recovery.</p>
-        <p class="proj-detail-text">Takeaway: The project is a starting point for rethinking how vulnerability can be communicated through wearables, using form, material, and responsive electronics as the medium rather than words.</p>
+<!-- PROJECT 1 -->
+<div class="proj-card">
+  <div class="proj-header" onclick="toggleProject('p1')">
+    <div>
+      <p class="proj-num">Project 01</p>
+      <p class="proj-title">Responsive On-Body Fragility Indication</p>
+      <p class="proj-short">A wearable system designed to sense and communicate fragility states — exploring the intersection of the body, material feedback, and responsive design.</p>
+      <div class="proj-toggle" id="p1-toggle">
+        <span class="arrow">›</span><span class="toggle-label"> View process</span>
       </div>
     </div>
-
-    <!-- PROJECT 2 -->
-    <div class="proj-card">
-      <div class="proj-header" onclick="toggleProject('p2')">
-        <div>
-          <p class="proj-num">Project 02</p>
-          <p class="proj-title">Who Are You?</p>
-          <p class="proj-short">An interactive zoetrope installation designed to prompt introspection. The piece changes in response to the viewer's presence — their proximity alters what they see.</p>
-          <div class="proj-toggle" id="p2-toggle">
-            <span class="arrow">›</span><span class="toggle-label"> View process</span>
-          </div>
-        </div>
-        <div class="proj-slideshow-mini" id="ss-p2">
-          <div class="slide active"><img src="P2-1.jpeg" alt="P2-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-2.jpeg" alt="P2-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-3.jpeg" alt="P2-3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-4.jpeg" alt="P2-4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-5.jpeg" alt="P2-5" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-6.jpeg" alt="P2-6" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-7.jpeg" alt="P2-7" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-8.jpeg" alt="P2-8" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-9.jpeg" alt="P2-9" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-12.jpeg" alt="P2-10" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P2-13.jpeg" alt="P2-10" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p2',-1)">‹</button>
-          <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p2',1)">›</button>
-        </div>
-      </div>
-      <div class="proj-details" id="p2-details">
-        <p class="proj-detail-text">The title "Who Are You?" was designed to force introspection for guests who encounter the piece — meant for people to ponder how they see themselves, not to answer the question, but to sit with it.</p>
-        <p class="proj-detail-text">The device is built from three main active components working together to create its effect:</p>
-        <ul class="proj-components">
-          <li><span class="proj-component-name">Stepper Motor</span> — drives the rotation of the Zoetrope, controlling the speed and rhythm of the animation.</li>
-          <li><span class="proj-component-name">Two Ultrasound Sensors</span> — one detects the viewer's approach and starts the machine; the second tracks proximity to shift the RGB light.</li>
-          <li><span class="proj-component-name">RGB LED Strip</span> — strobes the Zoetrope at precise intervals, creating the illusion of motion from still images.</li>
-        </ul>
-        <p class="proj-detail-text">This simple mechanism carries a surprisingly layered narrative. The viewer is drawn in by the mesmerizing effect but quickly realizes their presence is shaping what they see. A mirror at the back of the installation extends this — placing the visitor inside the piece itself, not just in front of it.</p>
-      </div>
+    <div class="proj-slideshow-mini" id="ss-p1">
+      <div class="slide active"><img src="DSC05579.png" alt="OPEN" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P1-Closed.png" alt="CLOSED" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P1-Sketch.png" alt="Sketch" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P1-Test.png" alt="Test" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p1',-1)">‹</button>
+      <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p1',1)">›</button>
     </div>
-
-    <!-- PROJECT 3 -->
-    <div class="proj-card">
-      <div class="proj-header" onclick="toggleProject('p3')">
-        <div>
-          <p class="proj-num">Project 03</p>
-          <p class="proj-title">Retractable Rain Hood</p>
-          <p class="proj-short">A human-centered design project developed in collaboration with a wheelchair user, addressing rain protection without compromising hand strength or mobility.</p>
-          <div class="proj-toggle" id="p3-toggle">
-            <span class="arrow">›</span><span class="toggle-label"> View process</span>
-          </div>
-        </div>
-        <div class="proj-slideshow-mini" id="ss-p3">
-          <div class="slide active"><div class="slide-placeholder">[ add image ]</div></div>
-          <div class="slide active"><img src="IMG_2920.jpg" alt="P3-full" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P3-1.jpeg" alt="P3-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P3-3.jpeg" alt="P3-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P3-6.jpeg" alt="P3-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <div class="slide active"><img src="P3-14.jpeg" alt="P3-14" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-          <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p3',-1)">‹</button>
-          <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p3',1)">›</button>
-        </div>
-      </div>
-      <div class="proj-details" id="p3-details">
-        <p class="proj-detail-text">Our client uses a wheelchair and has limited hand strength — making standard umbrellas effectively inaccessible. The brief was to design a solution that protected her from rain while keeping her hands free and in control of her chair.</p>
-        <p class="proj-detail-text">After working directly with the client through a series of meetings, we developed a retractable hood system that could be operated with minimal grip strength and without interrupting her ability to maneuver. The design was shaped entirely around her specific physical constraints and daily routines — not a general-purpose product, but something made for one person's real life.</p>
-        <p class="proj-detail-text">[ Add materials, fabrication process, testing notes, or final outcome here. ]</p>
-      </div>
-    </div>
-
   </div>
-</section>
+  <div class="proj-details" id="p1-details">
+    <p class="proj-detail-text">Overview: A wearable head accessory for patients recovering from brain or head injuries. The project addresses a real gap: people in recovery are physically vulnerable in public but have no reliable, non-verbal way to communicate that to strangers around them.</p>
+    <p class="proj-detail-text">The Problem: There are almost no social conventions for signaling bodily fragility in public. And verbal communication is not always accessible or comfortable for someone in recovery. The idea was to let an object carry that burden instead of the person.</p>
+    <p class="proj-detail-text">Design Process: Early sketches explored two inflation behaviors as distinct visual languages: bulbous forms for a protective, padded look, and pointy spike forms for a more active warning signal. Three physical prototypes followed, testing different structural approaches to inflatable geometry with fabric and air manifolds. A flat cut template was developed to fold into repeating diamond-spike modules, which made the form reproducible and iterable. The final prototype used a red fabric base with dark inflatable spike panels, showing both the protective silhouette and the social signaling function.</p>
+    <p class="proj-detail-text">Technical System: The prototype included a photoresistor sensor that detected changes in ambient light, which triggered a small air pump to inflate the spike structures. The inflation happens passively and automatically, no input required from the wearer. That was an important constraint given the user's limited cognitive and physical bandwidth during recovery.</p>
+    <p class="proj-detail-text">Takeaway: The project is a starting point for rethinking how vulnerability can be communicated through wearables, using form, material, and responsive electronics as the medium rather than words.</p>
+  </div>
+</div>
+
+<!-- PROJECT 2 -->
+<div class="proj-card">
+  <div class="proj-header" onclick="toggleProject('p2')">
+    <div>
+      <p class="proj-num">Project 02</p>
+      <p class="proj-title">Who Are You?</p>
+      <p class="proj-short">An interactive zoetrope installation designed to prompt introspection. The piece changes in response to the viewer's presence — their proximity alters what they see.</p>
+      <div class="proj-toggle" id="p2-toggle">
+        <span clas
 
      <!-- ══ ABOUT ══ -->
 <section class="section" id="about">
@@ -826,7 +765,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
   <div>
     <p class="connect-heading">Location</p>
-    <span class="connect-location">[ NYC & Pittsburgh, PA ]</span>
+    <span class="connect-location">[ NYC < > Pittsburgh, PA ]</span>
     <span style="display:block;font-size:13px;color:var(--text-dim);font-style:italic;line-height:2.3;">Open to remote</span>
   </div>
   <!-- ═══════════════════════════════════════════
