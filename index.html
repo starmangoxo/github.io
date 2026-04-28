@@ -34,7 +34,7 @@
 
   --serif: 'Instrument Serif', 'Georgia', serif;
   --mono: 'IBM Plex Mono', 'Courier New', monospace;  
-  --sans: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
 .mono { font-family: var(--mono); font-weight: 300; letter-spacing: 0.01em; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -126,6 +126,7 @@ nav {
   margin-top: 3rem;
   padding-left: 2rem;
   max-width: 800px;
+  font-family: var(--sans);  /* SANS */
   font-size: 12px;
   /* color: var(--text); */
   line-height: 1.85;
@@ -143,7 +144,7 @@ nav {
 .intro-headline { font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.25; color: var(--text); max-width: 900px; font-weight: 400; margin-bottom: 2rem; }
 .intro-headline em { font-style: italic; color: var(--red); }
 .intro-headline em.lime { color: var(--lime); }
-.intro-body { max-width: 1000px; font-size: 12px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; }
+.intro-body { max-width: 1000px; font-family: var(--sans); /* SANS */ font-size: 12px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; }
 
 
 /* ── FEATURED WORK ── */
