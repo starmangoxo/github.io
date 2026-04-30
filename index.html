@@ -145,7 +145,7 @@ nav {
 /* ── SECTIONS ── */
 .section { padding: 6rem 2.5rem; border-top: 1px solid var(--rule); }
 
-/* ── INTRO ── */
+/* ── WORK WITH ME TEXT (PREV INTRO) ── */
 .intro-headline { font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.25; color: var(--text); max-width: 900px; font-weight: 400; margin-bottom: 2rem; }
 .intro-headline em { font-style: italic; color: var(--red); }
 .intro-headline em.lime { color: var(--lime); }
@@ -171,8 +171,9 @@ nav {
 .pub-journal { font-family: var(--mono); font-size: 11px; color: var(--text-mid); font-style: italic; }
 .pub-arrow a { font-size: 11px; color: var(--blue); transition: color 0.15s; }
 .pub-item:hover .pub-arrow a { color: var(--text); }
+
      
-/* ── SELECTED WORK GRID ── */
+/* ── WORK WITH ME GRID (PREV SELECTED WORK GRID) ── */
 .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); }
 .work-item { background: var(--bg2); display: flex; flex-direction: column; }
 
@@ -366,22 +367,6 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   <span class="scroll-label">Scroll</span>
 </section>
 
-<!-- ══ INTRO ══ -->
-<section class="section" id="intro">
-  <div class="section-header">
-    <span class="section-num">00</span>
-    <div class="section-rule"></div>
-    <span class="section-lbl">Introduction</span>
-  </div>
-  <p class="intro-headline">
-    I don't believe in the separation of <em>technical</em> and <em class="lime">creative</em> minds.
-  </p>
-  <p class="intro-body">
-    My work lives at the intersection of making, research, and the arts. I design physical products, study how people use them, and make sure the work speaks for itself visually and technically.
-  </p>
-</section>
-
-
 <!-- ══ FEATURED WORK ══ -->
 <section class="section" id="featured">
   <div class="section-header">
@@ -516,92 +501,12 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     </li>
   </ul>
 </section>
-     
-<!-- ══ SELECTED WORK ══ -->
-<section class="section" id="work">
-  <div class="section-header">
-    <span class="section-num">03</span>
-    <div class="section-rule"></div>
-    <span class="section-lbl">Selected Work</span>
-  </div>
 
-  <div class="work-grid">
-       
-
-    <!-- UX RESEARCH -->
-     <div class="work-item">
-       <div class="slideshow" id="ss-ux">
-         <div class="slide active"><img src="UX-1.jpg" alt="UX research 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="UX-2.jpg" alt="UX research 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <button class="slide-arrow prev" onclick="slideNav('ss-ux',-1)">‹</button>
-         <button class="slide-arrow next" onclick="slideNav('ss-ux',1)">›</button>
-         <div class="slide-controls" id="ss-ux-dots"></div>
-       </div>
-       <div class="work-meta">
-         <div class="work-title-row">
-           <span class="work-title">UX Research & UI Analysis</span>
-         </div>
-         <p class="work-desc">User interviews, surveys, and usability studies across client populations. Translated findings into design decisions for UI and software development teams.</p>
-         <div class="work-tags">
-           <span class="work-tag">Research</span>
-           <span class="work-tag">Interviewing</span>
-           <span class="work-tag">Data Synthesis</span>
-         </div>
-       </div>
-     </div>
-
-    <!-- 3D / CAD SLIDESHOW -->
-     <div class="work-item">
-       <div class="slideshow" id="ss-3d">
-         <div class="slide active"><img src="3d-1.jpg" alt="3D render 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="3d-1-2.jpg" alt="3D render 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="3d-2.jpg" alt="3D render 3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="3d-3.jpg" alt="3D render 4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <button class="slide-arrow prev" onclick="slideNav('ss-3d',-1)">‹</button>
-         <button class="slide-arrow next" onclick="slideNav('ss-3d',1)">›</button>
-         <div class="slide-controls" id="ss-3d-dots"></div>
-       </div>
-       <div class="work-meta">
-         <div class="work-title-row">
-           <span class="work-title">3D Rendering</span>
-         </div>
-         <p class="work-desc">A selection of modeled and rendered work — product visualization, concept development, and fabrication-ready geometry.</p>
-         <div class="work-tags">
-           <span class="work-tag">3D Rendering</span>
-           <span class="work-tag">CAD</span>
-           <span class="work-tag">SolidWorks</span>
-         </div>
-       </div>
-     </div>
-
-    <!-- VISUAL STORYTELLER SLIDESHOW -->
-     <div class="work-item">
-       <div class="slideshow" id="ss-gd">
-         <div class="slide active"><img src="avenir design.png" alt="Avenir design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="EMA-ATTWLCover-16x20.jpg" alt="Cover design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="PROOF-FLYER copy.jpg" alt="Flyer design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <button class="slide-arrow prev" onclick="slideNav('ss-gd',-1)">‹</button>
-         <button class="slide-arrow next" onclick="slideNav('ss-gd',1)">›</button>
-         <div class="slide-controls" id="ss-gd-dots"></div>
-       </div>
-       <div class="work-meta">
-         <div class="work-title-row">
-           <span class="work-title">Visual Storyteller</span>
-         </div>
-         <p class="work-desc">Visual storytelling across research, grant media, publication figures, and personal creative projects — rooted in an arts practice.</p>
-         <div class="work-tags">
-           <span class="work-tag">Creative Direction</span>
-           <span class="work-tag">Research</span>
-           <span class="work-tag">Photography</span>
-         </div>
-       </div>
-     </div>
-</section>
 
 <!-- ══ ADDITIONAL PROJECTS ══ -->
 <section class="section" id="projects">
   <div class="section-header">
-    <span class="section-num">04</span>
+    <span class="section-num">03</span>
     <div class="section-rule"></div>
     <span class="section-lbl">Additional Projects</span>
   </div>
@@ -704,7 +609,98 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
 </div>
 </section>
+     
+<!-- ══ WORK WITH ME (PREV SELECTED WORK) ══ -->
+<section class="section" id="work">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <div class="section-rule"></div>
+    <span class="section-lbl">Work With Me</span>
+  </div>
 
+  <div class="work-grid">
+
+       
+<!-- ══ WORK WITH ME TEXT══ -->
+  <div class="work-intro">
+    <p class="intro-headline">
+      I don't believe in the separation of <em>technical</em> and <em class="lime">creative</em> minds.
+    </p>
+    <p class="intro-body">
+      My work lives at the intersection of making, research, and the arts. I design physical products, study how people use them, and make sure the work speaks for itself visually and technically.
+    </p>
+  </div>      
+
+    <!-- UX RESEARCH -->
+     <div class="work-item">
+       <div class="slideshow" id="ss-ux">
+         <div class="slide active"><img src="UX-1.jpg" alt="UX research 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="UX-2.jpg" alt="UX research 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <button class="slide-arrow prev" onclick="slideNav('ss-ux',-1)">‹</button>
+         <button class="slide-arrow next" onclick="slideNav('ss-ux',1)">›</button>
+         <div class="slide-controls" id="ss-ux-dots"></div>
+       </div>
+       <div class="work-meta">
+         <div class="work-title-row">
+           <span class="work-title">UX Research & UI Analysis</span>
+         </div>
+         <p class="work-desc">User interviews, surveys, and usability studies across client populations. Translated findings into design decisions for UI and software development teams.</p>
+         <div class="work-tags">
+           <span class="work-tag">Research</span>
+           <span class="work-tag">Interviewing</span>
+           <span class="work-tag">Data Synthesis</span>
+         </div>
+       </div>
+     </div>
+
+    <!-- 3D / CAD SLIDESHOW -->
+     <div class="work-item">
+       <div class="slideshow" id="ss-3d">
+         <div class="slide active"><img src="3d-1.jpg" alt="3D render 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="3d-1-2.jpg" alt="3D render 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="3d-2.jpg" alt="3D render 3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="3d-3.jpg" alt="3D render 4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <button class="slide-arrow prev" onclick="slideNav('ss-3d',-1)">‹</button>
+         <button class="slide-arrow next" onclick="slideNav('ss-3d',1)">›</button>
+         <div class="slide-controls" id="ss-3d-dots"></div>
+       </div>
+       <div class="work-meta">
+         <div class="work-title-row">
+           <span class="work-title">3D Rendering</span>
+         </div>
+         <p class="work-desc">A selection of modeled and rendered work — product visualization, concept development, and fabrication-ready geometry.</p>
+         <div class="work-tags">
+           <span class="work-tag">3D Rendering</span>
+           <span class="work-tag">CAD</span>
+           <span class="work-tag">SolidWorks</span>
+         </div>
+       </div>
+     </div>
+
+    <!-- VISUAL STORYTELLER SLIDESHOW -->
+     <div class="work-item">
+       <div class="slideshow" id="ss-gd">
+         <div class="slide active"><img src="avenir design.png" alt="Avenir design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="EMA-ATTWLCover-16x20.jpg" alt="Cover design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="PROOF-FLYER copy.jpg" alt="Flyer design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <button class="slide-arrow prev" onclick="slideNav('ss-gd',-1)">‹</button>
+         <button class="slide-arrow next" onclick="slideNav('ss-gd',1)">›</button>
+         <div class="slide-controls" id="ss-gd-dots"></div>
+       </div>
+       <div class="work-meta">
+         <div class="work-title-row">
+           <span class="work-title">Visual Storyteller</span>
+         </div>
+         <p class="work-desc">Visual storytelling across research, grant media, publication figures, and personal creative projects — rooted in an arts practice.</p>
+         <div class="work-tags">
+           <span class="work-tag">Creative Direction</span>
+           <span class="work-tag">Research</span>
+           <span class="work-tag">Photography</span>
+         </div>
+       </div>
+     </div>
+</section>
+     
      
      <!-- ══ ABOUT ══ -->
 <section class="section" id="about">
