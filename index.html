@@ -71,6 +71,17 @@ nav {
 .nav-links { display: flex; gap: 2.5rem; }
 .nav-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); transition: color 0.15s; }
 .nav-links a:hover { color: var(--text); }
+.header {
+  padding-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .header { display: flex; justify-content: space-between; align-items: center; }
+  .header .nav,
+  .header nav {
+    margin-left: auto;
+  }
+}
 
 /* ── SECTION HEADER ── */
 .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 5rem; position: relative; }
@@ -235,7 +246,24 @@ nav {
 /*.slide-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-dim); opacity: 0.35; cursor: pointer; transition: opacity 0.2s; border: none; padding: 0; } */
 /*.slide-dot.on { opacity: 1; background: var(--text); } */
 
+@media (max-width: 768px) {
+  .slide-controls {
+    bottom: 0.4rem;
+    gap: 4px;
+  }
+}
 
+@media (max-width: 768px) {
+  .slide-controls button,
+  .slide-controls .dot,
+  .slide-controls .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    min-width: 5px;
+    min-height: 5px;
+  }
+}
+     
 .work-meta { padding: 1.5rem; border-top: 1px solid var(--rule); }
 .work-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
 .work-title { font-family: var(--mono); font-size: 13px; font-weight: 400; color: var(--lime); }
@@ -757,7 +785,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
               <ul class="service-components">
                <li><span class="service-component-name">Visual systems and presentation materials</li>
                <li><span class="service-component-name">Public-facing or conceptual interpretations of research</li>
-               <li><span class="service-component-name">Research summaries</li>
+               <li><span class="service-component-name">Research insights and communication reports</li>
              </ul>
            </div>
             
