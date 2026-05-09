@@ -150,6 +150,11 @@ nav {
 .intro-headline em { font-style: italic; color: var(--red); }
 .intro-headline em.lime { color: var(--lime); }
 .intro-body { max-width: 900px; font-family: var(--mono); font-size: 12px; color: var(--text); line-height: 1.85; margin-bottom: 5rem; }
+     
+.service-components { list-style: none; margin: 1rem 0; }
+.service-components li { font-size: 12px; color: var(--text-mid); line-height: 1.8; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem; }
+.service-components li::before { content: '—'; position: absolute; left: 0; color: var(--lime); }
+.service-component-name { color: var(--text); }
 
 
 /* ── FEATURED WORK ── */
@@ -647,10 +652,11 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
          <p class="work-desc">I review products, prototypes, and design directions through a combined lens of engineering logic, research methodology, behavioral understanding, and lived context. The focus is identifying where assumptions begin to break down once a product enters actual use. This includes usability, workflow friction, cultural and behavioral context, experiential blind spots, and the relationship between technical intention and human reality.</p>
             
          <div class="service-subsection">
-              <p class="work-desc">What I do</p>
-                <li><span class="proj-component-name">Review products, prototypes, and systems through UX, engineering, and behavioral context</li>
-                <li><span class="proj-component-name">Identify usability issues, assumptions, and real-world breakdowns</li>
-                <li><span class="proj-component-name">Translate findings into clear design and product direction</li>
+              <p class="work-desc">What I do</p>.service-components
+              <ul class="service-components">
+                <li><span class="service-component-name">Review products, prototypes, and systems through UX, engineering, and behavioral context</li>
+                <li><span class="service-component-name">Identify usability issues, assumptions, and real-world breakdowns</li>
+                <li><span class="service-component-name">Translate findings into clear design and product direction</li>
               </ul>
             </div>
           
