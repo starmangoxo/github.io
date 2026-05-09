@@ -98,6 +98,20 @@ nav {
 .hero-left-rule { position: absolute; left: 2.5rem; top: 10%; bottom: 10%; width: 1px; background: var(--red); opacity: 0.5; }
 .hero-available { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 2rem; padding-left: 2rem; }
 
+@media (max-width: 768px) {
+  #hero {
+    min-height: 100svh;
+    padding: 4rem 1.5rem 2rem;
+    justify-content: center;
+  }
+
+  .hero-left-rule {
+    left: 1.5rem;
+    top: 8%;
+    bottom: 8%;
+  }
+}
+     
 .hero-headline {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 2.7vw, 2.7rem);
@@ -301,6 +315,12 @@ nav {
 .sidebar-item { font-size: 12px; color: var(--text); line-height: 2.1; display: block; }
 .container {display: grid; grid-template-columns: 1.8fr 2.2fr; }
 
+@media (max-width: 768px) {
+  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .about-layout > :nth-child(2) { order: -1; }
+  .profile-photo-wrap { width: 100%; }
+}
+     
 /* ── SKILLS ── */
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem 4rem; }
 .skill-group-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lime); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 1rem; }
