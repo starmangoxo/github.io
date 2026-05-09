@@ -145,7 +145,7 @@ nav {
 /* ── SECTIONS ── */
 .section { padding: 6rem 2.5rem; border-top: 1px solid var(--rule); }
 
-/* ── WORK WITH ME TEXT (PREV INTRO) ── */
+/* ── SERVICES TEXT (PREV INTRO) ── */
 .intro-headline { font-family: var(--serif); font-size: clamp(1.5rem, 2.7vw, 2.3rem); line-height: 1.25; color: var(--text); max-width: 900px; font-weight: 400; margin-bottom: 1.5rem; }
 .intro-headline em { font-style: italic; color: var(--red); }
 .intro-headline em.lime { color: var(--lime); }
@@ -156,7 +156,7 @@ nav {
 .service-components li::before { content: '—'; position: absolute; left: 0; color: var(--lime); }
 .service-component-name { color: var(--text); }
      
-/* ── WORK WITH ME GRID (PREV SELECTED WORK GRID) ── */
+/* ── SERVICES GRID (PREV SELECTED WORK GRID) ── */
 .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); }
 .work-item { background: var(--bg2); display: flex; flex-direction: column; }
 
@@ -228,6 +228,7 @@ nav {
 .proj-details { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; padding: 0 2rem; }
 .proj-details.open { max-height: 1200px; padding: 2rem; border-top: 1px solid var(--rule); }
 
+.proj-detail-title { font-size: 12px; color: var(--text-mid); text-transform: uppercase; line-height: 1.85; margin-bottom: 0rem; max-width: 640px; }
 .proj-detail-text { font-size: 12px; color: var(--text-mid); line-height: 1.85; margin-bottom: 1rem; max-width: 640px; }
 .proj-detail-text:last-child { margin-bottom: 0; }
 .proj-components { list-style: none; margin: 1rem 0; }
@@ -329,6 +330,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   <a href="#" class="nav-logo">EVANGELINE</a>
   <div class="nav-links">
     <a href="#featured">Work</a>
+    <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
@@ -539,9 +541,16 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     </div>
   </div>
   <div class="proj-details" id="p1-details">
-    <p class="proj-detail-text">Our client uses a wheelchair and has limited hand strength — making standard umbrellas effectively inaccessible. The brief was to design a solution that protected her from rain while keeping her hands free and in control of her chair.</p>
-    <p class="proj-detail-text">After working directly with the client through a series of meetings, we developed a retractable hood system that could be operated with minimal grip strength and without interrupting her ability to maneuver. The design was shaped entirely around her specific physical constraints and daily routines — not a general-purpose product, but something made for one person's real life.</p>
-    <p class="proj-detail-text">[ Add materials, fabrication process, testing notes, or final outcome here. ]</p>
+    <p class="proj-detail-title">Overview</p>
+    <p class="proj-detail-text">A rain hood for a wheelchair user with limited hand strength, designed so she can stay protected without letting go of her chair.</p>
+    <p class="proj-detail-title">The problem</p>
+    <p class="proj-detail-text">Umbrellas need grip and a free hand. Our client had neither. We also couldn't permanently modify the wheelchair without voiding its warranty, so the attachment had to be entirely clamp-based.</p>
+    <p class="proj-detail-title">Design process</p>
+    <p class="proj-detail-text">We prototyped a small-scale version first, which helped us simplify the rib structure from multiple axes down to a single rod mount. Client feedback moved us from a full 180-degree shell to a 90-degree quarter-shell she felt more comfortable with. The three-point clamp attachment only became clear after meeting her in person and seeing the chair. Motorization was part of the original plan but was cut due to time constraints.</p>
+    <p class="proj-detail-title">Technical system</p>
+    <p class="proj-detail-text">A quarter-ellipsoid shell built from laser-cut wooden ribbing and a clear canopy. It clamps to the rear of the wheelchair at three points and folds out overhead.</p>
+    <p class="proj-detail-title">Takeaway</p>
+    <p class="proj-detail-text">We were surprised by how little already exists for this kind of need. The client was happy with the result, and a next version would add motorization and more time with her early in the process.</p>
   </div>
 </div>
 
@@ -566,11 +575,16 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     </div>
   </div>
   <div class="proj-details" id="p2-details">
-    <p class="proj-detail-text">Overview: A wearable head accessory for patients recovering from brain or head injuries. The project addresses a real gap: people in recovery are physically vulnerable in public but have no reliable, non-verbal way to communicate that to strangers around them.</p>
-    <p class="proj-detail-text">The Problem: There are almost no social conventions for signaling bodily fragility in public. And verbal communication is not always accessible or comfortable for someone in recovery. The idea was to let an object carry that burden instead of the person.</p>
-    <p class="proj-detail-text">Design Process: Early sketches explored two inflation behaviors as distinct visual languages: bulbous forms for a protective, padded look, and pointy spike forms for a more active warning signal. Three physical prototypes followed, testing different structural approaches to inflatable geometry with fabric and air manifolds. A flat cut template was developed to fold into repeating diamond-spike modules, which made the form reproducible and iterable. The final prototype used a red fabric base with dark inflatable spike panels, showing both the protective silhouette and the social signaling function.</p>
-    <p class="proj-detail-text">Technical System: The prototype included a photoresistor sensor that detected changes in ambient light, which triggered a small air pump to inflate the spike structures. The inflation happens passively and automatically, no input required from the wearer. That was an important constraint given the user's limited cognitive and physical bandwidth during recovery.</p>
-    <p class="proj-detail-text">Takeaway: The project is a starting point for rethinking how vulnerability can be communicated through wearables, using form, material, and responsive electronics as the medium rather than words.</p>
+    <p class="proj-detail-title">Overview</p>
+    <p class="proj-detail-text">A wearable head accessory for people recovering from brain or head injuries, designed to signal physical vulnerability to strangers without the wearer having to say a word.</p>
+    <p class="proj-detail-title">The problem</p>
+    <p class="proj-detail-text">There is no social convention for communicating bodily fragility in public. For someone in recovery, verbal communication is not always an option. We wanted an object to carry that burden instead.</p>
+    <p class="proj-detail-title">Design process</p>
+    <p class="proj-detail-text">Early sketches tested two directions: bulbous forms for a padded, protective look, and spike forms as a more active warning signal. Three prototypes worked through different inflatable geometries using fabric and air manifolds. A flat-cut template that folded into repeating diamond-spike modules made the form reproducible. The final version used a red fabric base with dark inflatable spike panels.</p>
+    <p class="proj-detail-title">Technical system</p>
+    <p class="proj-detail-text">A photoresistor detects changes in ambient light and triggers a small air pump to inflate the spikes. No input needed from the wearer.</p>
+    <p class="proj-detail-title">Takeaway</p>
+    <p class="proj-detail-text">A starting point for using wearables to communicate vulnerability through form and material rather than words.</p>
   </div>
 </div>
 
@@ -602,28 +616,43 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     </div>
   </div>
   <div class="proj-details" id="p3-details">
-    <p class="proj-detail-text">The title "Who Are You?" was designed to force introspection for guests who encounter the piece — meant for people to ponder how they see themselves, not to answer the question, but to sit with it.</p>
-    <p class="proj-detail-text">The device is built from three main active components working together to create its effect:</p>
+    <p class="proj-detail-title">Overview</p>
+    <p class="proj-detail-text">An interactive zoetrope that changes what you see based on how close you get. The piece was built around one idea: there are things about yourself you should learn to accept, love, and forgive.</p>
+    <p class="proj-detail-title">The problem</p>
+    <p class="proj-detail-text">Most public art is passive. This piece was designed to create productive discomfort — to make people sit with questions about themselves rather than just observe something.</p>
+    <p class="proj-detail-title">Design process</p>
+    <p class="proj-detail-text">From a distance, blue light shows an angel rising and falling in the zoetrope. As you approach, the light shifts to red and the same figure becomes a devil. Closer still, a mirror and laser-cut text pull you into the piece directly:</p>
+    <ul class="proj-components">
+      <li><span class="proj-component-name">"To confront a person with his own shadow is to show him his own light." — Carl Jung</li>
+      <li><span class="proj-component-name">Who are you?</li>
+      <li><span class="proj-component-name">Have you truly accepted all of yourself?</li>
+      <li><span class="proj-component-name">What do you see?</li>
+      <li><span class="proj-component-name">What do you want to see?</li>
+      <li><span class="proj-component-name">The inner turmoils of man stem from being unable to make peace with their inner demons.</li>
+    </ul>
+    <p class="proj-detail-text">The zoetrope needed darkness, so we enclosed the whole installation. That ended up making the experience more intimate. The quotes were hard to read in the low light, which people actually preferred — it felt less like a message being pushed at them.</p>
+    <p class="proj-detail-title">Technical system</p>
     <ul class="proj-components">
       <li><span class="proj-component-name">Stepper Motor</span> — drives the rotation of the Zoetrope, controlling the speed and rhythm of the animation.</li>
       <li><span class="proj-component-name">Two Ultrasound Sensors</span> — one detects the viewer's approach and starts the machine; the second tracks proximity to shift the RGB light.</li>
       <li><span class="proj-component-name">RGB LED Strip</span> — strobes the Zoetrope at precise intervals, creating the illusion of motion from still images.</li>
     </ul>
-    <p class="proj-detail-text">This simple mechanism carries a surprisingly layered narrative. The viewer is drawn in by the mesmerizing effect but quickly realizes their presence is shaping what they see. A mirror at the back of the installation extends this — placing the visitor inside the piece itself, not just in front of it.</p>
+    <p class="proj-detail-title">Takeaway</p>
+    <p class="proj-detail-text">A lot of what went wrong ended up serving the piece. The darkness, the hard-to-read text, the enclosure — none of it was planned, but it all made the experience feel more personal. People were drawn in, and that was the goal.</p>
   </div>
 </div>
 </section>
 
      
-<!-- ══ WORK WITH ME (PREV SELECTED WORK) ══ -->
-<section class="section" id="work">
+<!-- ══ SERVICES (PREV SELECTED WORK) ══ -->
+<section class="section" id="services">
   <div class="section-header">
     <span class="section-num">04</span>
     <div class="section-rule"></div>
-    <span class="section-lbl">Work With Me</span>
+    <span class="section-lbl">Services</span>
   </div>
        
-<!-- ══ WORK WITH ME TEXT══ -->
+<!-- ══ SERVICES TEXT══ -->
   <div class="work-intro">
     <p class="intro-headline">
       Research & Design Consultant
