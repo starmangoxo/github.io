@@ -200,6 +200,10 @@ nav {
 .project-body p { font-size: 13px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 900px; }
 .project-pullquote { font-family: var(--sans); font-size: 1.15rem; color: var(--text-mid); border-left: 2px solid var(--blue); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; line-height: 1.5; max-width: 560px; }
 
+.tooltip { position: relative;cursor: help; border-bottom: 1px dotted currentColor;}
+.tooltip-text { visibility: hidden;opacity: 0; position: absolute; left: 0; top: 120%; width: 280px; padding: 10px 12px; background: #111; color: #fff; font-size: 12px; line-height: 1.4; border-radius: 6px;  z-index: 10; transition: opacity 0.2s ease; }
+.tooltip:hover .tooltip-text {visibility: visible; opacity: 1; }
+     
 /* ── RESEARCH & PUBLICATIONS ── */
 .pub-list { list-style: none; }
 .pub-item { display: grid; grid-template-columns: 60px 1fr auto; gap: 1.5rem 2rem; align-items: start; padding: 1.75rem 0; border-bottom: 1px solid var(--rule); }
@@ -440,7 +444,15 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
       <h3 class="project-main-title">Wearable EEG Interface Design</h3>
       <div class="project-body">
         <p>What starts as a design problem rarely stays one. For six years I was embedded in the same project, first as a research assistant for three years, then holding two concurrent roles simultaneously as a product design engineer and ECE researcher for the next three. Across both, I contributed at the fabrication bench, the coordination table, and the publication stage.</p>
-        <p>Electroencephalography (EEG) is a brain-sensing technology used to diagnose and monitor seizures in epilepsy as well as stroke, brain injuries, and sleep disorders. We created Sevo, the first-of-its-kind EEG adapter, which helps EEG work on people with coarse, curly, and dense. Traditional EEG does not maintain good scalp contact on this hair type leading to misdiagnosis, discomfort, and sometimes the need to shave off the hair.</p>
+        <p>
+            <span class="tooltip">
+              Electroencephalography (EEG)
+              <span class="tooltip-text">
+                Electroencephalography (EEG) is a compound term formed in the 1930s from Greek and Latin roots: electro (electric), encephalo (brain), and -graphy (writing or recording). It literally means recording the electrical activity of the brain.
+              </span>
+            </span>
+            is a brain-sensing technology used to diagnose and monitor seizures in epilepsy as well as stroke, brain injuries, and sleep disorders. We created Sevo, the first-of-its-kind EEG adapter, which helps EEG work on people with coarse, curly, and dense hair. Traditional EEG does not maintain good scalp contact on this hair type, leading to misdiagnosis, discomfort, and sometimes the need to shave off hair.
+          </p>
         <p>On the design side: I prototyped and tested wearable EEG devices using SolidWorks and digital fabrication, advised on hair and scalp interface usability and accessibility, managed design documentation for accuracy and repeatability, and led initial FDA application materials.</p>
         <p>On the research side: I coordinated testing across four international sites, developed standardized intake procedures, partnered with clinicians and vendors on system evaluation, supported grant writing and reporting, and co-authored multiple peer-reviewed publications.</p>
         <p class="project-pullquote">Holding both roles simultaneously meant I was constantly translating — between making and managing, between technical requirements and human needs, between what was built and what needed to be communicated.</p>
