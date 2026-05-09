@@ -174,7 +174,7 @@ nav {
 
      
 /* ── WORK WITH ME GRID (PREV SELECTED WORK GRID) ── */
-.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); }
+.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); }
 .work-item { background: var(--bg2); display: flex; flex-direction: column; }
 
 /* SLIDESHOW */
@@ -416,8 +416,8 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
            ═══════════════════════════════════════════ -->
       <div class="slideshow" id="ss-featured" style="margin-bottom:2.5rem;aspect-ratio:16/9; width:85%;">
         <div class="slide active"><img src="Sevo-3.JPG" alt="SA Sevo" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-        <div class="slide"><img src="science.ads7375-f1.jpg" alt="EEG process" style="width:75%;height:75%;object-fit:contain;display:block;"></div>
         <div class="slide"><img src="SA-Sevo-7.jpg" alt="Sevo SA-7" style="width:75%;height:75%;object-fit:contain;display:block;"></div>
+        <div class="slide"><img src="science.ads7375-f1.jpg" alt="EEG process" style="width:75%;height:75%;object-fit:contain;display:block;"></div>
         <div class="slide"><img src="Biosemi+Sevo.jpeg" alt="Biosemi+Sevo" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
         <div class="slide"><img src="SA-Sevo-5.jpg" alt="Sevo SA-5" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
         <button class="slide-arrow prev" onclick="slideNav('ss-featured',-1)">‹</button>
@@ -595,9 +595,9 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     <div class="proj-slideshow-mini" id="ss-p3">
       <div class="slide active"><img src="IMG_2920.jpg" alt="P3-full" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       <div class="slide"><img src="P3-1.jpeg" alt="P3-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-      <div class="slide"><img src="P3-3.jpeg" alt="P3-3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-      <div class="slide"><img src="P3-6.jpeg" alt="P3-6" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-      <div class="slide"><img src="P3-14.jpeg" alt="P3-14" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P3-3.jpg" alt="P3-3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P3-6.jpg" alt="P3-6" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="P3-14.jpg" alt="P3-14" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p3',-1)">‹</button>
       <button class="slide-arrow next" onclick="event.stopPropagation();slideNav('ss-p3',1)">›</button>
     </div>
@@ -629,37 +629,12 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
 
   <div class="work-grid">
-       
-    <!-- RESEARCH SLIDESHOW -->
-     <div class="work-item">
-       <div class="slideshow" id="ss-ux">
-         <div class="slide active"><img src="UX-1.jpg" alt="UX research 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="UX-2.jpg" alt="UX research 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <button class="slide-arrow prev" onclick="slideNav('ss-ux',-1)">‹</button>
-         <button class="slide-arrow next" onclick="slideNav('ss-ux',1)">›</button>
-         <div class="slide-controls" id="ss-ux-dots"></div>
-       </div>
-       <div class="work-meta">
-         <div class="work-title-row">
-           <span class="work-title">Research Translation & Strategic Advisory</span>
-         </div>
-         <p class="work-desc">User interviews, surveys, and usability studies across client populations. Translated findings into design decisions for UI and software development teams.</p>
-         <p class="work-desc">For: Researchers, founders, and product teams with rigorous work they can't communicate, apply, or move forward with. They know what they've built — they don't know how to make it legible to the people who need to act on it.</p>
-         <div class="work-tags">
-           <span class="work-tag">Research</span>
-           <span class="work-tag">Interviewing</span>
-           <span class="work-tag">Data Synthesis</span>
-         </div>
-       </div>
-     </div>
 
     <!-- DESIGN SLIDESHOW-->
      <div class="work-item">
        <div class="slideshow" id="ss-3d">
+        <div class="slide"><img src="SA-Sevo-7.jpg" alt="Sevo SA-7" style="width:75%;height:75%;object-fit:contain;display:block;"></div>
          <div class="slide active"><img src="3d-1.jpg" alt="3D render 1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="3d-1-2.jpg" alt="3D render 2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="3d-2.jpg" alt="3D render 3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="3d-3.jpg" alt="3D render 4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <button class="slide-arrow prev" onclick="slideNav('ss-3d',-1)">‹</button>
          <button class="slide-arrow next" onclick="slideNav('ss-3d',1)">›</button>
          <div class="slide-controls" id="ss-3d-dots"></div>
@@ -681,9 +656,8 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
     <!-- VISUAL SLIDESHOW -->
      <div class="work-item">
        <div class="slideshow" id="ss-gd">
-         <div class="slide active"><img src="avenir design.png" alt="Avenir design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="EMA-ATTWLCover-16x20.jpg" alt="Cover design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="PROOF-FLYER copy.jpg" alt="Flyer design" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide active"><img src="PDP-EMA.jpg" alt="PDP-EMA" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+         <div class="slide"><img src="EMAOnSet.jpg" alt="EMAOnSet" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <button class="slide-arrow prev" onclick="slideNav('ss-gd',-1)">‹</button>
          <button class="slide-arrow next" onclick="slideNav('ss-gd',1)">›</button>
          <div class="slide-controls" id="ss-gd-dots"></div>
