@@ -146,44 +146,22 @@ nav {
 .section { padding: 6rem 2.5rem; border-top: 1px solid var(--rule); }
 
 /* ── WORK WITH ME TEXT (PREV INTRO) ── */
-.intro-headline { font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.25; color: var(--text); max-width: 900px; font-weight: 400; margin-bottom: 1.5rem; }
+.intro-headline { font-family: var(--serif); font-size: clamp(1.5rem, 2.7vw, 2.3rem); line-height: 1.25; color: var(--text); max-width: 900px; font-weight: 400; margin-bottom: 1.5rem; }
 .intro-headline em { font-style: italic; color: var(--red); }
 .intro-headline em.lime { color: var(--lime); }
-.intro-body { max-width: 900px; font-family: var(--mono); font-size: 12px; color: var(--text); line-height: 1.85; margin-bottom: 5rem; }
+.intro-body { max-width: 1000px; font-family: var(--mono); font-size: 12px; color: var(--text); line-height: 1.85; margin-bottom: 5rem; }
      
 .service-components { list-style: none; margin: 1rem 0; }
 .service-components li { font-size: 12px; color: var(--text-mid); line-height: 1.8; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem; }
 .service-components li::before { content: '—'; position: absolute; left: 0; color: var(--lime); }
 .service-component-name { color: var(--text); }
-
-
-/* ── FEATURED WORK ── */
-.project-layout { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; }
-.project-sidebar { position: sticky; top: 6rem; }
-.proj-meta-item { margin-bottom: 2rem; }
-.proj-meta-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
-.proj-meta-val { font-size: 12px; color: var(--text-mid); line-height: 1.9; display: block; }
-.project-main-title { font-family: var(--serif); font-size: clamp(1.2rem, 1.6vw, 1.6rem); font-weight: 200; color: var(--text); margin-bottom: 2rem; line-height: 1.2; }
-.project-body p { font-size: 13px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 900px; }
-.project-pullquote { font-family: var(--sans); font-size: 1.15rem; color: var(--text-mid); border-left: 2px solid var(--blue); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; line-height: 1.5; max-width: 560px; }
-
-/* ── RESEARCH & PUBLICATIONS ── */
-.pub-list { list-style: none; }
-.pub-item { display: grid; grid-template-columns: 60px 1fr auto; gap: 1.5rem 2rem; align-items: start; padding: 1.75rem 0; border-bottom: 1px solid var(--rule); }
-.pub-item:first-child { border-top: 1px solid var(--rule); }
-.pub-year { font-family: var(--mono); font-size: 11px; color: var(--blue); letter-spacing: 0.05em; padding-top: 2px; }
-.pub-title { font-family: var(--mono); font-size: 12px; color: var(--text); line-height: 1.65; margin-bottom: 0.35rem; }
-.pub-journal { font-family: var(--mono); font-size: 11px; color: var(--text-mid); font-style: italic; }
-.pub-arrow a { font-size: 11px; color: var(--blue); transition: color 0.15s; }
-.pub-item:hover .pub-arrow a { color: var(--text); }
-
      
 /* ── WORK WITH ME GRID (PREV SELECTED WORK GRID) ── */
 .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); }
 .work-item { background: var(--bg2); display: flex; flex-direction: column; }
 
 /* SLIDESHOW */
-.slideshow { aspect-ratio: 16/10; background: var(--bg3); position: relative; overflow: hidden; }
+.slideshow { aspect-ratio: 16/10; background: var(--bg3); height: 75%; position: relative; overflow: hidden; }
 .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.5s ease; display: flex; align-items: center; justify-content: center; }
 .slide.active { opacity: 1; }
 .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -206,6 +184,27 @@ nav {
 .work-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .work-tag { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--rule); padding: 3px 8px; transition: border-color 0.15s, color 0.15s; }
 .work-tag:hover { border-color: var(--lime); color: var(--lime); }
+
+     
+/* ── FEATURED WORK ── */
+.project-layout { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; }
+.project-sidebar { position: sticky; top: 6rem; }
+.proj-meta-item { margin-bottom: 2rem; }
+.proj-meta-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
+.proj-meta-val { font-size: 12px; color: var(--text-mid); line-height: 1.9; display: block; }
+.project-main-title { font-family: var(--serif); font-size: clamp(1.2rem, 1.6vw, 1.6rem); font-weight: 200; color: var(--text); margin-bottom: 2rem; line-height: 1.2; }
+.project-body p { font-size: 13px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 900px; }
+.project-pullquote { font-family: var(--sans); font-size: 1.15rem; color: var(--text-mid); border-left: 2px solid var(--blue); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; line-height: 1.5; max-width: 560px; }
+
+/* ── RESEARCH & PUBLICATIONS ── */
+.pub-list { list-style: none; }
+.pub-item { display: grid; grid-template-columns: 60px 1fr auto; gap: 1.5rem 2rem; align-items: start; padding: 1.75rem 0; border-bottom: 1px solid var(--rule); }
+.pub-item:first-child { border-top: 1px solid var(--rule); }
+.pub-year { font-family: var(--mono); font-size: 11px; color: var(--blue); letter-spacing: 0.05em; padding-top: 2px; }
+.pub-title { font-family: var(--mono); font-size: 12px; color: var(--text); line-height: 1.65; margin-bottom: 0.35rem; }
+.pub-journal { font-family: var(--mono); font-size: 11px; color: var(--text-mid); font-style: italic; }
+.pub-arrow a { font-size: 11px; color: var(--blue); transition: color 0.15s; }
+.pub-item:hover .pub-arrow a { color: var(--text); }
 
      
 /* ── ADDITIONAL PROJECTS ── */
@@ -692,7 +691,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
            <span class="work-title">Research Communication & Visual Output</span>
          </div>
          <p class="work-desc">For researchers, institutions, and teams who need complex findings translated into forms people can meaningfully engage with across exhibitions, publications, presentations, visual systems, and experiential formats.</p>
-         <p class="work-desc">I translate research into visual, written, and spatial outputs that preserve its integrity while making it accessible to broader audiences. This includes publication materials, presentation systems, visual narratives, and experiential or installation-based interpretations that communicate both information and meaning across research, grants, and creative practice.</p>
+         <p class="work-desc">I translate research into visual, written, and spatial outputs that preserve its integrity while making it accessible to broader audiences. This includes publication materials, presentation systems, visual narratives, and experiential or installation-based interpretations that communicate both information and meaning across research, grants, and creative practice. Visual storytelling is used as a point of access, helping complex work reach and resonate with wider audiences beyond its original context.</p>
          
          <div class="service-subsection">
               <p class="work-desc">What I do</p>
