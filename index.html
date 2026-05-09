@@ -222,7 +222,7 @@ nav {
 .proj-title { font-family: var(--serif); font-size: 1.3rem; color: var(--text); font-weight: 400; margin-bottom: 0.75rem; line-height: 1.2; }
 .proj-short { font-family: var(--mono); font-size: 11px; color: var(--text); line-height: 1.75; max-width: 600px; }
 
-.proj-toggle { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-top: 1rem; display: flex; align-items: center; gap: 6px; transition: color 0.15s; user-select: none; }
+.proj-toggle { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-top: 1rem; display: flex; align-items: center; gap: 6px; transition: color 0.15s; user-select: none; }
 .proj-toggle .arrow { display: inline-block; transition: transform 0.3s; }
 .proj-toggle.open .arrow { transform: rotate(90deg); }
 .proj-toggle:hover { color: var(--amber); }
@@ -231,12 +231,12 @@ nav {
 .proj-details.open { max-height: 1200px; padding: 2rem; border-top: 1px solid var(--rule); }
 
 .proj-detail-title { font-size: 12px; color: var(--text-mid); text-transform: uppercase; line-height: 1.85; margin-bottom: 0rem; max-width: 640px; }
-.proj-detail-text { font-size: 12px; color: var(--text-mid); line-height: 1.85; margin-bottom: 1rem; max-width: 640px; }
+.proj-detail-text { font-size: 12px; color: var(--text-mid); line-height: 1.85; margin-bottom: 2rem; max-width: 640px; }
 .proj-detail-text:last-child { margin-bottom: 0; }
 .proj-components { list-style: none; margin: 1rem 0; }
 .proj-components li { font-size: 12px; color: var(--text-mid); line-height: 1.8; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem; }
-.proj-components li::before { content: '—'; position: absolute; left: 0; color: var(--lavender-dim); }
-.proj-component-name { color: var(--text); }
+.proj-components li::before { content: '—'; position: absolute; left: 0; color: var(--amber); }
+.proj-component-name { color: var(--text-mid); }
      
 /* ── ABOUT ── */
 .about-layout { display: grid; grid-template-columns: 1fr 500px; gap: 5rem; align-items: start; }
@@ -660,7 +660,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
       Research & Design Consultant
     </p>
     <p class="intro-body">
-      My work lives at the intersection of making, research, and the arts. I design physical products, study how people use them, and make sure the work speaks for itself visually and technically. I don't believe in the separation of <em class="blue">technical</em> and <em class="lavender">creative</em> minds.
+      My work lives at the intersection of making, research, and the arts. I design physical products, study how people use them, and make sure the work speaks for itself visually and technically. I don't believe in the separation of <em class="--blue">technical</em> and <em class="--lavender">creative</em> minds.
     </p>
   </div>
 
@@ -710,7 +710,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
 
     <!-- VISUAL SLIDESHOW -->
      <div class="work-item">
-       <div class="slideshow" id="ss-gd">
+       <div class="slideshow services-slideshow" id="ss-gd">
          <div class="slide active"><img src="PDP-EMA.jpg" alt="PDP-EMA" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <div class="slide"><img src="EMAOnSet.jpg" alt="EMAOnSet" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
          <button class="slide-arrow prev" onclick="slideNav('ss-gd',-1)">‹</button>
