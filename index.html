@@ -161,8 +161,8 @@ nav {
 .work-item { background: var(--bg2); display: flex; flex-direction: column; }
 
 /* SLIDESHOW */
-<div class="slideshow services-slideshow"><div>
-.services-slideshow { aspect-ratio: 16/10; background: var(--bg3); width: 75%; max-width: 500px; margin: 0 auto; position: relative; overflow: hidden; }
+.slideshow { aspect-ratio: 16/10; background: var(--bg3); auto; position: relative; overflow: hidden; }
+.services-slideshow { width: 75%; max-width: 500px; margin: 0; }
 .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.5s ease; display: flex; align-items: center; justify-content: center; }
 .slide.active { opacity: 1; }
 .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
