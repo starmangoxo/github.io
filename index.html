@@ -71,13 +71,11 @@ nav {
 .nav-links { display: flex; gap: 2.5rem; }
 .nav-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); transition: color 0.15s; }
 .nav-links a:hover { color: var(--text); }
-.header {
-  padding-bottom: 12px;
-}
+.header { padding-bottom: 12px; }
 
 @media (max-width: 768px) {
-  nav a { font-size: 0.85rem; }
-  .nav-links { display: flex; gap: 3px; }
+  nav a { font-size: 0.75rem; }
+  .nav-links { display: flex; gap: 5px; }
 }
 
 /* ── SECTION HEADER ── */
@@ -122,7 +120,7 @@ nav {
   max-width: 1500px;
 }
 
-.hero-p1 { display: block; margin-bottom: 1.2 em; }
+.hero-p1 { display: block; margin-bottom: 1.5 em; }
 .hero-p2 { display: block; font-style: italic; }
 
 /* hover words start at their accent color, brighten further on hover */
@@ -174,15 +172,13 @@ nav {
 .proj-meta-item { margin-bottom: 2rem; }
 .proj-meta-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
 .proj-meta-val { font-size: 12px; color: var(--text-mid); line-height: 1.9; display: block; }
-.project-main-title { font-family: var(--serif); font-size: clamp(1.4rem, 1.6vw, 1.6rem); font-weight: 200; color: var(--text); margin-bottom: 2rem; line-height: 1.2; }
+.project-main-title { font-family: var(--serif); font-size: clamp(1.7rem, 3.1vw, 1.7rem); font-weight: 200; color: var(--text); margin-bottom: 1rem; line-height: 1.2; }
 .project-body p { font-size: 13px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 900px; }
 .project-pullquote { font-family: var(--sans); font-size: 1.15rem; color: var(--text-mid); border-left: 2px solid var(--blue); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; line-height: 1.5; max-width: 560px; }
 
-@media (max-width: 768px) {
-  #ss-work.slideshow { width: 100% !important; margin-bottom: 2rem; aspect-ratio: 3/4; }
-}
+@media (max-width: 768px) { #ss-work.slideshow {aspect-ratio: 3/4 !important;  width: 100% !important; margin-bottom: 2rem !important; } }
      
-.tooltip { position: relative;cursor: help; border-bottom: .75px dotted currentColor;}
+.tooltip { position: relative;cursor: help; border-bottom: 1px dotted currentColor;}
 .tooltip-text { visibility: hidden; opacity: 0; position: absolute; left: 0; top: 120%; width: 280px; padding: 10px 12px; background: #111; color: var(--blue); font-size: 12px; line-height: 1.4; border-radius: 6px;  z-index: 10; transition: opacity 0.2s ease; }
 .tooltip:hover .tooltip-text {visibility: visible; opacity: 1; }
      
@@ -260,15 +256,16 @@ nav {
 /*.slide-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-dim); opacity: 0.35; cursor: pointer; transition: opacity 0.2s; border: none; padding: 0; } */
 /*.slide-dot.on { opacity: 1; background: var(--text); } */
 
-@media (max-width: 768px) {
-  .slide-controls { bottom: 0.4rem; gap: 4px; }
-}
+@media (max-width: 768px) { .slide-controls { bottom: 0.4rem; gap: 4px; } } /*fix the dots*/
 
 @media (max-width: 768px) {
   .slide-controls button,
   .slide-controls .dot,
   .slide-controls .swiper-pagination-bullet { width: 2px; height: 2px; min-width: 2px; min-height: 2px; aspect-ratio: 1 / 1; border-radius: 50%; padding: 0; line-height: 0; }
 }
+
+@media (max-width: 768px) {.slideshow {aspect-ratio: 4/3 !important; } }
+@media (max-width: 768px) {.services-slideshow {aspect-ratio: 4/3 !important; } }
      
 .work-meta { padding: 1.5rem; border-top: 1px solid var(--rule); }
 .work-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
@@ -287,8 +284,8 @@ nav {
 .about-headline em { font-style: italic; }
 .about-headline .red { color: var(--red); }
 .about-headline .lime { color: var(--lime); }
-.about-body p { font-size: 13px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 540px; }
-.about-sub-title { font-family: var(--mono); font-size: 12px; color: var(--lavender); text-transform: uppercase; line-height: 1.85; margin-top: 9rem; margin-bottom: .5rem; max-width: 540px; }
+.about-body p { font-size: 13px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 700px; }
+.about-sub-title { font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; color: var(--lavender); text-transform: uppercase; line-height: 1.85; margin-top: 9rem; margin-bottom: .5rem; max-width: 540px; }
 .about-subsection p { font-size: 13px; color: var(--text); line-height: 1.85; margin-bottom: 1.25rem; max-width: 540px; }
 
 /* PROFILE PHOTO */
@@ -497,11 +494,11 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
                It literally means recording the electrical activity of the brain.
               </span>
             </span>
-            is a brain-sensing technology used to diagnose and monitor seizures in epilepsy as well as stroke, brain injuries, and sleep disorders. We created Sevo, the first-of-its-kind EEG adapter, which helps EEG work on people with coarse, curly, and dense hair. Traditional EEG does not maintain good scalp contact on this hair type, leading to misdiagnosis, discomfort, and sometimes the need to shave off hair.
+            is a brain-sensing technology used to diagnose and monitor seizures in epilepsy as well as stroke, brain injuries, and sleep disorders. Arnelle Etienne initially identified the problem through her own experience as someone with a large afro and went on to invent Sevo, the first-of-its-kind EEG adapter designed to improve EEG performance for people with coarse, curly, and dense hair. Traditional EEG systems often fail to maintain reliable scalp contact on these hair types, leading to discomfort, inaccurate readings, misdiagnosis, and in some cases the need to shave hair. I joined the team in its early stages and went on to become one of the primary people leading and developing the work behind Sevo.
           </p>
-        <p>On the design side: I prototyped and tested wearable EEG devices using SolidWorks and digital fabrication, advised on hair and scalp interface usability and accessibility, managed design documentation for accuracy and repeatability, and led initial FDA application materials.</p>
-        <p>On the research side: I coordinated testing across four international sites, developed standardized intake procedures, partnered with clinicians and vendors on system evaluation, supported grant writing and reporting, and co-authored multiple peer-reviewed publications.</p>
-        <p class="project-pullquote">Holding both roles simultaneously meant I was constantly translating — between making and managing, between technical requirements and human needs, between what was built and what needed to be communicated.</p>
+        <p><em class="blue>On the design side:<em> I prototyped and tested wearable EEG devices using SolidWorks and digital fabrication, advised on hair and scalp interface usability and accessibility, managed design documentation for accuracy and repeatability, and led initial FDA application materials.</p>
+        <p><em class="blue>On the research side:<em> I coordinated testing across four international sites (South Africa, Egypt, Rwanda, and Ghana), developed standardized intake procedures, partnered with clinicians and vendors on system evaluation, supported grant writing and reporting, and co-authored multiple peer-reviewed publications.</p>
+        <p class="project-pullquote">Holding both roles simultaneously meant I was constantly translating - between making and managing, between technical requirements and human needs, between what was built and what needed to be communicated.</p>
         <p>That's the kind of work I do best.</p>
 
         <!-- ═══════════════════════════════════════════
@@ -784,7 +781,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
          <p class="work-desc">I translate research into visual, written, and spatial outputs that preserve its integrity while making it accessible to broader audiences. This includes publication materials, presentation systems, visual narratives, and experiential interpretations that extend research beyond traditional academic or technical formats. Visual storytelling acts as a point of access, helping complex work reach wider audiences beyond its original context.</p>
          
          <div class="service-subsection">
-              <p class="work-desc">What I do</p>
+              <p class="work-desc">What I do:</p>
               <ul class="service-components">
                 <li><span class="service-component-name">Translate research into clear visual and written communication</li>
                 <li><span class="service-component-name">Reframe complex findings into structured narratives and insights</li>
@@ -793,7 +790,7 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
             </div>
 
          <div class="service-subsection">
-             <p class="work-desc">Outputs</p>
+             <p class="work-desc">Outputs:</p>
               <ul class="service-components">
                <li><span class="service-component-name">Visual systems and presentation materials</li>
                <li><span class="service-component-name">Public-facing or conceptual interpretations of research</li>
@@ -825,8 +822,8 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
       </h2>
       <div class="about-body">
         <p>My work moves across research, design, engineering, and visual storytelling. Everything I do is connected through curiosity, systems thinking, and a commitment to creating work that is both rigorous and emotionally resonant.<p>
-        <p>I'm a product design engineer working across hardware development, clinical research, UX, and the visual arts. I studied Product Innovation and Applied Entrepreneurial Studies in the College of Engineering at Carnegie Mellon University through a self-defined major that shaped the interdisciplinary nature of my practice.<p>
-        <p>For six years, I worked simultaneously as a product design engineer and ECE researcher, contributing to device prototyping, clinician collaboration, international research coordination, and peer-reviewed publications. My work centers on healthcare equity, using engineering, design, and research to improve EEG procedures and readings for Black populations across the diaspora, including collaborations with university labs and hospitals in South Africa, Ghana, Egypt, and Rwanda.<p>
+        <p>I'm a product design engineer working across hardware development, clinical research, UX, and the visual arts. I studied at Carnegie Mellon University through a self-defined major that shapes the interdisciplinary nature of my practice.<p>
+        <p>For six years, I worked simultaneously as a Product Design Engineer and ECE researcher, contributing to device prototyping, clinician collaboration, international research coordination, and peer-reviewed publications.<p>
         <p>My arts practice exists alongside all of this, not separate from it. I bring an engineer's rigor, a researcher's patience, and an artist's eye to work that sits between systems, storytelling, and public understanding.</p>
       </div>
          
