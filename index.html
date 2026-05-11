@@ -232,6 +232,15 @@ nav {
 .service-components li { font-size: 12px; color: var(--text-mid); line-height: 1.8; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem; }
 .service-components li::before { content: '—'; position: absolute; left: 0; color: var(--lime); }
 .service-component-name { color: var(--text); }
+
+.service-toggle{font-family:var(--sans);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-top:1rem;display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none;transition:color 0.15s;}
+.service-toggle:hover{color:var(--amber);}
+.service-toggle .arrow{display:inline-block;transition:transform 0.3s;}
+.service-toggle.open .arrow{transform:rotate(90deg);}
+
+.service-details{max-height:0;overflow:hidden;transition:max-height 0.5s ease;padding:0;}
+.service-details.open{max-height:1200px;padding-top:1.5rem;}
+
      
 /* ── SERVICES GRID (PREV SELECTED WORK GRID) ── */
 .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); }
@@ -762,44 +771,54 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   <div class="work-grid">
 
     <!-- DESIGN SLIDESHOW-->
-     <div class="work-item">
-       <div class="slideshow services-slideshow" id="ss-3d">
-         <div class="slide active"><img src="Biosemi+Sevo.jpeg" alt="Biosemi+Sevo" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <div class="slide"><img src="P3-20.jpg" alt="P3-20" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-         <button class="slide-arrow prev" onclick="slideNav('ss-3d',-1)">‹</button>
-         <button class="slide-arrow next" onclick="slideNav('ss-3d',1)">›</button>
-         <div class="slide-controls" id="ss-3d-dots"></div>
+     <div class="work-meta">
+       <div class="work-title-row">
+         <span class="work-title">Contextual Design & Product Review</span>
        </div>
-       <div class="work-meta">
-         <div class="work-title-row">
-           <span class="work-title">Contextual Design & Product Review</span>
-         </div>
-         <p class="work-desc">For research teams, startups, and design groups building products, systems, or experiences that need to function within real human environments.</p>
-         <p class="work-desc">I review products, prototypes, and design directions through engineering logic, research methodology, behavioral understanding, and lived context. The focus is identifying where assumptions break down when a product enters real use, including usability, workflow friction, cultural context, and experiential blind spots.</p>
-            
+     
+       <!-- FIRST SENTENCE (kept visible) -->
+       <p class="work-desc">
+         For research teams, startups, and design groups building products, systems, or experiences that need to function within real human environments.
+       </p>
+     
+       <!-- TAGS MOVED UNDER FIRST SENTENCE -->
+       <div class="work-tags">
+         <span class="work-tag">UX + Product Systems</span>
+         <span class="work-tag">Human Centered Design</span>
+         <span class="work-tag">Contextual Research</span>
+       </div>
+     
+       <!-- TOGGLE -->
+       <div class="service-toggle" onclick="toggleService('s1')" id="s1-toggle">
+         <span class="arrow">›</span>
+         <span class="toggle-label">More Info</span>
+       </div>
+     
+       <!-- COLLAPSIBLE CONTENT -->
+       <div class="service-details" id="s1-details">
+     
+         <p class="work-desc">
+           I review products, prototypes, and design directions through engineering logic, research methodology, behavioral understanding, and lived context. The focus is identifying where assumptions break down when a product enters real use, including usability, workflow friction, cultural context, and experiential blind spots.
+         </p>
+     
          <div class="service-subsection">
-              <p class="work-desc">What I do:</p>
-              <ul class="service-components">
-                <li><span class="service-component-name">Review products, prototypes, and systems through UX, engineering, and behavioral context</li>
-                <li><span class="service-component-name">Identify usability issues, assumptions, and real-world breakdowns</li>
-                <li><span class="service-component-name">Translate findings into clear design and product direction</li>
-              </ul>
-            </div>
-          
-            <div class="service-subsection">
-              <p class="work-desc">Outputs:</p>
-              <ul class="service-components">  
-                <li><span class="service-component-name">Structured review and critique</li>
-                <li><span class="service-component-name">Key insights and system breakdowns</li>
-                <li><span class="service-component-name">Actionable recommendations for iteration</li>
-              </ul>
-            </div>
-            
-         <div class="work-tags">
-           <span class="work-tag">UX + Product Systems</span>
-           <span class="work-tag">Human Centered Design</span>
-           <span class="work-tag">Contextual Research</span>
+           <p class="work-desc">What I do:</p>
+           <ul class="service-components">
+             <li><span class="service-component-name">Review products, prototypes, and systems through UX, engineering, and behavioral context</span></li>
+             <li><span class="service-component-name">Identify usability issues, assumptions, and real-world breakdowns</span></li>
+             <li><span class="service-component-name">Translate findings into clear design and product direction</span></li>
+           </ul>
          </div>
+     
+         <div class="service-subsection">
+           <p class="work-desc">Outputs:</p>
+           <ul class="service-components">
+             <li><span class="service-component-name">Structured review and critique</span></li>
+             <li><span class="service-component-name">Key insights and system breakdowns</span></li>
+             <li><span class="service-component-name">Actionable recommendations for iteration</span></li>
+           </ul>
+         </div>
+     
        </div>
      </div>
 
@@ -812,35 +831,56 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
          <button class="slide-arrow next" onclick="slideNav('ss-gd',1)">›</button>
          <div class="slide-controls" id="ss-gd-dots"></div>
        </div>
+     
        <div class="work-meta">
+     
          <div class="work-title-row">
            <span class="work-title">Research Communication & Visual Output</span>
          </div>
-         <p class="work-desc">For researchers, institutions, and teams who need complex findings translated into forms people can meaningfully engage with across exhibitions, publications, presentations, visual systems, and experiential formats.</p>
-         <p class="work-desc">I translate research into visual, written, and spatial outputs that preserve its integrity while making it accessible to broader audiences. This includes publication materials, presentation systems, visual narratives, and experiential interpretations that extend research beyond traditional academic or technical formats. Visual storytelling acts as a point of access, helping complex work reach wider audiences beyond its original context.</p>
-         
-         <div class="service-subsection">
-              <p class="work-desc">What I do:</p>
-              <ul class="service-components">
-                <li><span class="service-component-name">Translate research into clear visual and written communication</li>
-                <li><span class="service-component-name">Reframe complex findings into structured narratives and insights</li>
-                <li><span class="service-component-name">Develop visual, spatial, or experiential interpretations of research</li>
-              </ul>
-            </div>
-
-         <div class="service-subsection">
-             <p class="work-desc">Outputs:</p>
-              <ul class="service-components">
-               <li><span class="service-component-name">Visual systems and presentation materials</li>
-               <li><span class="service-component-name">Public-facing or conceptual interpretations of research</li>
-               <li><span class="service-component-name">Research insights and communication reports</li>
-             </ul>
-           </div>
-            
+     
+         <!-- FIRST SENTENCE -->
+         <p class="work-desc">
+           For researchers, institutions, and teams who need complex findings translated into forms people can meaningfully engage with across exhibitions, publications, presentations, visual systems, and experiential formats.
+         </p>
+     
+         <!-- TAGS -->
          <div class="work-tags">
            <span class="work-tag">Research Design</span>
            <span class="work-tag">Data Visualization + Storytelling</span>
            <span class="work-tag">Experiential Interpretation</span>
+         </div>
+     
+         <!-- TOGGLE -->
+         <div class="service-toggle" onclick="toggleService('s2')" id="s2-toggle">
+           <span class="arrow">›</span>
+           <span class="toggle-label">More Info</span>
+         </div>
+     
+         <!-- COLLAPSIBLE CONTENT -->
+         <div class="service-details" id="s2-details">
+     
+           <p class="work-desc">
+             I translate research into visual, written, and spatial outputs that preserve its integrity while making it accessible to broader audiences. This includes publication materials, presentation systems, visual narratives, and experiential interpretations that extend research beyond traditional academic or technical formats. Visual storytelling acts as a point of access, helping complex work reach wider audiences beyond its original context.
+           </p>
+     
+           <div class="service-subsection">
+             <p class="work-desc">What I do:</p>
+             <ul class="service-components">
+               <li><span class="service-component-name">Translate research into clear visual and written communication</span></li>
+               <li><span class="service-component-name">Reframe complex findings into structured narratives and insights</span></li>
+               <li><span class="service-component-name">Develop visual, spatial, or experiential interpretations of research</span></li>
+             </ul>
+           </div>
+     
+           <div class="service-subsection">
+             <p class="work-desc">Outputs:</p>
+             <ul class="service-components">
+               <li><span class="service-component-name">Visual systems and presentation materials</span></li>
+               <li><span class="service-component-name">Public-facing or conceptual interpretations of research</span></li>
+               <li><span class="service-component-name">Research insights and communication reports</span></li>
+             </ul>
+           </div>
+     
          </div>
        </div>
      </div>
@@ -1074,6 +1114,22 @@ function toggleProject(id) {
   toggle.querySelector('.toggle-label').textContent = isOpen ? ' View process' : ' Hide process';
 }
 
+// ── PROJECT DROPDOWNS ──
+function toggleService(id) {
+  const details = document.getElementById(id + '-details');
+  const toggle = document.getElementById(id + '-toggle');
+
+  const isOpen = details.classList.contains('open');
+
+  if (isOpen) {
+    details.classList.remove('open');
+    toggle.classList.remove('open');
+  } else {
+    details.classList.add('open');
+    toggle.classList.add('open');
+  }
+}
+     
 // ── SECTION FADE-IN ──
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
