@@ -582,16 +582,16 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   <div class="proj-header" onclick="toggleProject('p1')">
     <div>
       <p class="proj-num">PROJECT 01</p>
-      <p class="proj-title">Retractable Wheelchair Rain Hood</p>
-      <p class="proj-short">A custom rain hood for a wheelchair user with limited hand strength, designed to protect without interrupting her ability to control her chair.</p>
+      <p class="proj-title">An Extension of Us</p>
+      <p class="proj-short">An interactive braid installation made for my mother, my sister, and myself during the pandemic, when we were each living in a different state.</p>
       <div class="proj-toggle" id="p1-toggle">
         <span class="arrow">›</span><span class="toggle-label"> View process</span>
       </div>
     </div>
     <div class="proj-slideshow-mini" id="ss-p1">
-      <div class="slide active"><img src="IMG_8928.webp" alt="P1-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-      <div class="slide"><img src="AEU-3.png" alt="P1-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
-      <div class="slide"><img src="AEU-2.jpg" alt="P1-3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div  class="slide active"><img src="IMG_8928.webp" alt="P1-1" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="AEU-3.jpg" alt="P1-2" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div class="slide"><img src="AEU-2.png" alt="P1-3" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       <div class="slide"><img src="AEU-5.jpg" alt="P1-4" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       <div class="slide"><img src="AEU-4.jpg" alt="P1-5" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       <button class="slide-arrow prev" onclick="event.stopPropagation();slideNav('ss-p1',-1)">‹</button>
@@ -600,19 +600,19 @@ footer p { font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); }
   </div>
   <div class="proj-details" id="p1-details">
     <p class="proj-detail-title">Overview</p>
-    <p class="proj-detail-text">A rain hood for a wheelchair user with limited hand strength, designed so she can stay protected without letting go of her chair.</p>
+    <p class="proj-detail-text">A pair of sensor-embedded braids made for my mother, my sister, and myself during 2020, when we were each living in a different state. The piece is rooted in time spent together doing hair at my mother's braiding salon. In a family of five daughters, learning to braid has always been a rite of passage.</p>
     <p class="proj-detail-title">The problem</p>
-    <p class="proj-detail-text">Umbrellas need grip and a free hand. Our client had neither. We also couldn't permanently modify the wheelchair without voiding its warranty, so the attachment had to be entirely clamp-based.</p>
+    <p class="proj-detail-text">Distance during the pandemic made ordinary closeness impossible. This was an attempt to hold onto something specific. Not just connection in the abstract, but the particular intimacy of doing each other's hair.</p>
     <p class="proj-detail-title">Design process</p>
-    <p class="proj-detail-text">We prototyped a small-scale version first, which helped us simplify the rib structure from multiple axes down to a single rod mount. Client feedback moved us from a full 180-degree shell to a 90-degree quarter-shell she felt more comfortable with. The three-point clamp attachment only became clear after meeting her in person and seeing the chair. Motorization was part of the original plan but was cut due to time constraints.</p>
+    <p class="proj-detail-text">The original plan was three braids, one for each of us. Two were completed. Braiding the components in was harder than expected, the hair kept snagging on the pieces. After several failed attempts, separating the hair into three sections before combining them solved it and produced a braid that looked different from anything typical, which felt right given everything inside it. The Arduinos were initially meant to communicate wirelessly, but a software issue made that unworkable. Wiring them together directly was the fix. It was also my first time working with Arduino, so a lot of the process was learning as I went.</p>
     <p class="proj-detail-title">Technical system</p>
     <ul class="proj-components">
-      <li><span class="proj-component-name">Quarter-ellipsoid shell: Two laser-cut wooden ribs of different lengths form the arc of the hood, mounted on a single shared rod.</li>
-      <li><span class="proj-component-name">Canopy: Clear material stretched across the wooden ribbing for rain protection.</li>
-      <li><span class="proj-component-name">Three-point clamp system: Attaches to the rear of the wheelchair frame without permanent modification, connecting to a support box that holds the hood assembly.</li>
+      <li><span class="proj-component-name">Bring your hand near the braid: a light turns on for both people.</li>
+      <li><span class="proj-component-name">Squeeze the braid: the other person feels a buzz.</li>
+      <li><span class="proj-component-name">Both sing loudly enough: a song plays for both.</li>
     </ul>
     <p class="proj-detail-title extra-space-before">Takeaway</p>
-    <p class="proj-detail-text">We were surprised by how little already exists for this kind of need. The client was happy with the result, and a next version would add motorization and more time with her early in the process.</p>
+    <p class="proj-detail-text">Despite all the technical trouble, the piece ended up feeling like what it was supposed to. Using something as familiar as a braid to carry that much meaning made it personal in a way that a more conventional form wouldn't have.</p>
   </div>
 </div>
        
