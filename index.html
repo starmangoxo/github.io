@@ -238,13 +238,13 @@ nav {
 .service-toggle .arrow{display:inline-block;transition:transform 0.3s;}
 .service-toggle.open .arrow{transform:rotate(90deg);}
 
-.service-details{max-height:0;overflow:hidden;transition:max-height 0.5s ease;padding:0;}
-.service-details.open{max-height:1200px;padding-top:1.5rem;}
+.service-details{max-height:0;overflow:hidden;transition:max-height 0.4s ease, opacity 0.2s ease;opacity:0;}
+.service-details.open{max-height:1200px;opacity:1;padding-top:1.5rem;}
 
      
 /* ── SERVICES GRID (PREV SELECTED WORK GRID) ── */
-.work-grid{ display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);align-items:start; }
-.work-item{background:var(--bg2);display:flex;flex-direction:column;}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;align-items:start;grid-auto-rows:auto;}
+.work-item{background:var(--bg2);display:flex;flex-direction:column;height:fit-content;align-self:start;}
 @media (max-width:900px){
   .work-item{flex-direction:column;}
 }
